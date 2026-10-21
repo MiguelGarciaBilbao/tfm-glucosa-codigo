@@ -1,0 +1,21 @@
+# Núcleo de datos
+numpy>=2.0
+pandas>=2.2
+pyarrow>=16.0
+scipy>=1.13
+scikit-learn>=1.5
+
+# Aprendizaje profundo
+torch>=2.3
+
+# Configuración y experimentos
+pyyaml>=6.0
+
+# Notebooks y figuras
+jupyterlab>=4.2
+nbconvert>=7.0
+matplotlib>=3.9
+seaborn>=0.13
+
+# Calidad
+pytest>=8.0
