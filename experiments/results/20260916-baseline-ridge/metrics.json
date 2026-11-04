@@ -1,0 +1,559 @@
+{
+  "exp_id": "20260916-baseline-ridge",
+  "baseline": "ridge",
+  "config": {
+    "exp_id": "20260916-baseline-ridge",
+    "baseline": "ridge",
+    "description": "Un modelo por paciente, ajustado solo con su split de entrenamiento. Ve exactamente el mismo tensor que los LSTM, así que la diferencia entre ambos es atribuible a la estructura temporal, no a entradas distintas.\n",
+    "seeds": [
+      0
+    ],
+    "model": {
+      "alpha": 1.0
+    },
+    "data": {
+      "source": "data/processed",
+      "patients": [
+        559,
+        563,
+        570,
+        575,
+        588,
+        591,
+        540,
+        544,
+        552,
+        567,
+        584,
+        596
+      ],
+      "history": 12,
+      "horizons_min": [
+        30,
+        60
+      ],
+      "val_fraction": 0.2
+    },
+    "evaluation": {
+      "event_tolerance_min": 15,
+      "sensitivity": true
+    }
+  },
+  "seeds": [
+    0
+  ],
+  "by_seed": {
+    "0": {
+      "30": {
+        "summary": {
+          "horizon_min": 30,
+          "n_patients": 12,
+          "tolerance_min": 15,
+          "pooled_event_recall": {
+            "point": 0.2786885245901639,
+            "lo": 0.16393442622950818,
+            "hi": 0.39344262295081966,
+            "n": 61,
+            "confidence": 0.95
+          },
+          "rmse_pooled": 19.411629381873436,
+          "rmse_mean_over_patients": 19.2591499618691,
+          "rmse_std_over_patients": 2.4638513763604006,
+          "false_alarms_per_day_median": 0.42631865711475053,
+          "clarke_AB_pooled": 98.93971725793546,
+          "parkes_AB_pooled": 99.77327287276607,
+          "parkes_DE_pooled": 0.003334222459322486
+        },
+        "per_patient": [
+          {
+            "patient": "540",
+            "n_events": 11,
+            "n_detected": 4,
+            "recall": 0.36363636363636365,
+            "false_alarms_per_day": 0.8551633124381393,
+            "median_lead_time_min": 20.0,
+            "rmse": 21.077626288501424,
+            "mae": 15.801566503175316,
+            "grmse": 24.57181336115974,
+            "clarke_AB": 98.2072427393331,
+            "clarke_DE": 1.7927572606669058,
+            "parkes_AB": 99.82072427393331,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "544",
+            "n_events": 2,
+            "n_detected": 1,
+            "recall": 0.5,
+            "false_alarms_per_day": 0.46436633344082556,
+            "median_lead_time_min": 15.0,
+            "rmse": 16.60044664057136,
+            "mae": 11.829169179536658,
+            "grmse": 18.30258830574178,
+            "clarke_AB": 99.8093058733791,
+            "clarke_DE": 0.19069412662090007,
+            "parkes_AB": 99.92372234935164,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "552",
+            "n_events": 7,
+            "n_detected": 1,
+            "recall": 0.14285714285714285,
+            "false_alarms_per_day": 0.2942528735632184,
+            "median_lead_time_min": 15.0,
+            "rmse": 16.680914076771266,
+            "mae": 12.699080155096807,
+            "grmse": 18.451699381427158,
+            "clarke_AB": 98.73073436083409,
+            "clarke_DE": 1.2692656391659112,
+            "parkes_AB": 99.9546690843155,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "559",
+            "n_events": 3,
+            "n_detected": 1,
+            "recall": 0.3333333333333333,
+            "false_alarms_per_day": 0.30273300630693767,
+            "median_lead_time_min": 15.0,
+            "rmse": 19.046798915828866,
+            "mae": 13.527042833880703,
+            "grmse": 22.64796498777711,
+            "clarke_AB": 98.95150720838795,
+            "clarke_DE": 1.0484927916120577,
+            "parkes_AB": 99.78156400174748,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "563",
+            "n_events": 2,
+            "n_detected": 1,
+            "recall": 0.5,
+            "false_alarms_per_day": 0.8632446609216936,
+            "median_lead_time_min": 45.0,
+            "rmse": 20.652717555970586,
+            "mae": 13.291798872283742,
+            "grmse": 24.357123100791494,
+            "clarke_AB": 99.20886075949367,
+            "clarke_DE": 0.6724683544303797,
+            "parkes_AB": 99.68354430379748,
+            "parkes_DE": 0.03955696202531646
+          },
+          {
+            "patient": "567",
+            "n_events": 5,
+            "n_detected": 1,
+            "recall": 0.2,
+            "false_alarms_per_day": 0.5079365079365079,
+            "median_lead_time_min": 45.0,
+            "rmse": 20.036186740643313,
+            "mae": 14.056406516533393,
+            "grmse": 22.47873277784854,
+            "clarke_AB": 99.02597402597402,
+            "clarke_DE": 0.974025974025974,
+            "parkes_AB": 99.81447124304268,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "570",
+            "n_events": 2,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.10084033613445378,
+            "median_lead_time_min": null,
+            "rmse": 16.27909264693042,
+            "mae": 11.472844559625285,
+            "grmse": 20.005726377995128,
+            "clarke_AB": 99.72730814179977,
+            "clarke_DE": 0.2726918582002337,
+            "parkes_AB": 100.0,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "575",
+            "n_events": 8,
+            "n_detected": 4,
+            "recall": 0.5,
+            "false_alarms_per_day": 0.5341246290801187,
+            "median_lead_time_min": 22.5,
+            "rmse": 23.394854106046004,
+            "mae": 14.61568644384049,
+            "grmse": 27.671597483555495,
+            "clarke_AB": 98.41011006930289,
+            "clarke_DE": 1.4268242967794538,
+            "parkes_AB": 99.38850387280881,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "584",
+            "n_events": 2,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.2918918918918919,
+            "median_lead_time_min": null,
+            "rmse": 21.023648108259682,
+            "mae": 15.043612168645899,
+            "grmse": 24.19430182881255,
+            "clarke_AB": 99.28989139515454,
+            "clarke_DE": 0.7101086048454469,
+            "parkes_AB": 99.74937343358395,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "588",
+            "n_events": 1,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.20153953813855843,
+            "median_lead_time_min": null,
+            "rmse": 17.664958223196457,
+            "mae": 12.955674630416658,
+            "grmse": 20.66303911497768,
+            "clarke_AB": 99.88978692138133,
+            "clarke_DE": 0.11021307861866275,
+            "parkes_AB": 100.0,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "591",
+            "n_events": 11,
+            "n_detected": 2,
+            "recall": 0.18181818181818182,
+            "false_alarms_per_day": 1.1218130311614731,
+            "median_lead_time_min": 30.0,
+            "rmse": 22.11139269153098,
+            "mae": 15.731008806992708,
+            "grmse": 24.43070446201724,
+            "clarke_AB": 97.51483679525224,
+            "clarke_DE": 2.4109792284866467,
+            "parkes_AB": 99.33234421364985,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "596",
+            "n_events": 7,
+            "n_detected": 2,
+            "recall": 0.2857142857142857,
+            "false_alarms_per_day": 0.3882709807886755,
+            "median_lead_time_min": 45.0,
+            "rmse": 16.54116354817883,
+            "mae": 12.04455824974446,
+            "grmse": 18.56717712315199,
+            "clarke_AB": 98.56031128404669,
+            "clarke_DE": 1.4396887159533074,
+            "parkes_AB": 99.8443579766537,
+            "parkes_DE": 0.0
+          }
+        ]
+      },
+      "60": {
+        "summary": {
+          "horizon_min": 60,
+          "n_patients": 12,
+          "tolerance_min": 15,
+          "pooled_event_recall": {
+            "point": 0.06557377049180328,
+            "lo": 0.01639344262295082,
+            "hi": 0.13114754098360656,
+            "n": 61,
+            "confidence": 0.95
+          },
+          "rmse_pooled": 32.55674756341725,
+          "rmse_mean_over_patients": 32.34247497557441,
+          "rmse_std_over_patients": 3.7545744626382946,
+          "false_alarms_per_day_median": 0.36965457935334173,
+          "clarke_AB_pooled": 96.51907175246731,
+          "parkes_AB_pooled": 98.27287276607095,
+          "parkes_DE_pooled": 0.0733528941050947
+        },
+        "per_patient": [
+          {
+            "patient": "540",
+            "n_events": 11,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.7601451666116793,
+            "median_lead_time_min": null,
+            "rmse": 39.67943002605269,
+            "mae": 30.478570948368592,
+            "grmse": 49.40088684380714,
+            "clarke_AB": 93.58192900681249,
+            "clarke_DE": 6.167084976694156,
+            "parkes_AB": 97.66941556113302,
+            "parkes_DE": 0.035855145213338116
+          },
+          {
+            "patient": "544",
+            "n_events": 2,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.3714930667526605,
+            "median_lead_time_min": null,
+            "rmse": 28.049714591989343,
+            "mae": 20.334661138957916,
+            "grmse": 31.45777379880128,
+            "clarke_AB": 98.4744469870328,
+            "clarke_DE": 1.5255530129672008,
+            "parkes_AB": 99.38977879481313,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "552",
+            "n_events": 7,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.367816091954023,
+            "median_lead_time_min": null,
+            "rmse": 30.33397448752414,
+            "mae": 23.41209652330912,
+            "grmse": 35.246772874279685,
+            "clarke_AB": 96.50951949229375,
+            "clarke_DE": 3.4904805077062555,
+            "parkes_AB": 98.5494106980961,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "559",
+            "n_events": 3,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.2018220042046251,
+            "median_lead_time_min": null,
+            "rmse": 32.24797246478261,
+            "mae": 23.717649154029804,
+            "grmse": 39.84597108206856,
+            "clarke_AB": 96.19921363040629,
+            "clarke_DE": 3.45128877238969,
+            "parkes_AB": 98.03407601572738,
+            "parkes_DE": 0.218435998252512
+          },
+          {
+            "patient": "563",
+            "n_events": 2,
+            "n_detected": 1,
+            "recall": 0.5,
+            "false_alarms_per_day": 1.2948669913825404,
+            "median_lead_time_min": 75.0,
+            "rmse": 33.58313069051718,
+            "mae": 22.72835599319844,
+            "grmse": 41.63735137932098,
+            "clarke_AB": 98.10126582278481,
+            "clarke_DE": 1.740506329113924,
+            "parkes_AB": 98.65506329113924,
+            "parkes_DE": 0.19778481012658228
+          },
+          {
+            "patient": "567",
+            "n_events": 5,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.20317460317460317,
+            "median_lead_time_min": null,
+            "rmse": 35.11983729013378,
+            "mae": 25.782074848663388,
+            "grmse": 40.94936746905122,
+            "clarke_AB": 92.67161410018552,
+            "clarke_DE": 6.818181818181818,
+            "parkes_AB": 98.28385899814472,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "570",
+            "n_events": 2,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.10084033613445378,
+            "median_lead_time_min": null,
+            "rmse": 27.44043398855247,
+            "mae": 19.77195915397522,
+            "grmse": 34.49219153879942,
+            "clarke_AB": 99.45461628359953,
+            "clarke_DE": 0.5453837164004675,
+            "parkes_AB": 99.45461628359953,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "575",
+            "n_events": 8,
+            "n_detected": 1,
+            "recall": 0.125,
+            "false_alarms_per_day": 1.281899109792285,
+            "median_lead_time_min": 50.0,
+            "rmse": 35.74566564025103,
+            "mae": 25.48017966343926,
+            "grmse": 43.782852197726974,
+            "clarke_AB": 94.17040358744396,
+            "clarke_DE": 5.381165919282511,
+            "parkes_AB": 97.63554830819405,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "584",
+            "n_events": 2,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.2918918918918919,
+            "median_lead_time_min": null,
+            "rmse": 33.782153639486346,
+            "mae": 25.089187163159362,
+            "grmse": 40.63645562362192,
+            "clarke_AB": 97.6608187134503,
+            "clarke_DE": 2.130325814536341,
+            "parkes_AB": 98.32915622389307,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "588",
+            "n_events": 1,
+            "n_detected": 0,
+            "recall": 0.0,
+            "false_alarms_per_day": 0.10076976906927922,
+            "median_lead_time_min": null,
+            "rmse": 29.560942429767003,
+            "mae": 21.6902638476706,
+            "grmse": 36.1840838563065,
+            "clarke_AB": 99.19177075679647,
+            "clarke_DE": 0.8082292432035268,
+            "parkes_AB": 99.70609845701689,
+            "parkes_DE": 0.0
+          },
+          {
+            "patient": "591",
+            "n_events": 11,
+            "n_detected": 1,
+            "recall": 0.09090909090909091,
+            "false_alarms_per_day": 1.2237960339943343,
+            "median_lead_time_min": 45.0,
+            "rmse": 34.58815082138017,
+            "mae": 26.665070137567266,
+            "grmse": 40.204067171008894,
+            "clarke_AB": 94.21364985163206,
+            "clarke_DE": 5.267062314540059,
+            "parkes_AB": 95.43768545994065,
+            "parkes_DE": 0.29673590504451036
+          },
+          {
+            "patient": "596",
+            "n_events": 7,
+            "n_detected": 1,
+            "recall": 0.14285714285714285,
+            "false_alarms_per_day": 0.5824064711830133,
+            "median_lead_time_min": 65.0,
+            "rmse": 27.97829363645623,
+            "mae": 20.79302586358809,
+            "grmse": 32.995168247885225,
+            "clarke_AB": 97.50972762645914,
+            "clarke_DE": 2.490272373540856,
+            "parkes_AB": 98.21011673151752,
+            "parkes_DE": 0.11673151750972763
+          }
+        ]
+      }
+    }
+  },
+  "aggregate": {
+    "30": {
+      "rmse_pooled": {
+        "mean": 19.411629381873436,
+        "std": 0.0
+      },
+      "false_alarms_per_day_median": {
+        "mean": 0.42631865711475053,
+        "std": 0.0
+      },
+      "clarke_AB_pooled": {
+        "mean": 98.93971725793546,
+        "std": 0.0
+      },
+      "parkes_AB_pooled": {
+        "mean": 99.77327287276607,
+        "std": 0.0
+      },
+      "parkes_DE_pooled": {
+        "mean": 0.003334222459322486,
+        "std": 0.0
+      },
+      "event_recall": {
+        "mean": 0.2786885245901639,
+        "std": 0.0,
+        "n_events": 61,
+        "ci_first_seed": {
+          "point": 0.2786885245901639,
+          "lo": 0.16393442622950818,
+          "hi": 0.39344262295081966,
+          "n": 61,
+          "confidence": 0.95
+        }
+      }
+    },
+    "60": {
+      "rmse_pooled": {
+        "mean": 32.55674756341725,
+        "std": 0.0
+      },
+      "false_alarms_per_day_median": {
+        "mean": 0.36965457935334173,
+        "std": 0.0
+      },
+      "clarke_AB_pooled": {
+        "mean": 96.51907175246731,
+        "std": 0.0
+      },
+      "parkes_AB_pooled": {
+        "mean": 98.27287276607095,
+        "std": 0.0
+      },
+      "parkes_DE_pooled": {
+        "mean": 0.0733528941050947,
+        "std": 0.0
+      },
+      "event_recall": {
+        "mean": 0.06557377049180328,
+        "std": 0.0,
+        "n_events": 61,
+        "ci_first_seed": {
+          "point": 0.06557377049180328,
+          "lo": 0.01639344262295082,
+          "hi": 0.13114754098360656,
+          "n": 61,
+          "confidence": 0.95
+        }
+      }
+    }
+  },
+  "sensitivity": {
+    "5": {
+      "30": {
+        "point": 0.03278688524590164,
+        "lo": 0.0,
+        "hi": 0.08196721311475409,
+        "n": 61,
+        "confidence": 0.95
+      },
+      "60": {
+        "point": 0.03278688524590164,
+        "lo": 0.0,
+        "hi": 0.08196721311475409,
+        "n": 61,
+        "confidence": 0.95
+      }
+    },
+    "15": {
+      "30": {
+        "point": 0.2786885245901639,
+        "lo": 0.16393442622950818,
+        "hi": 0.39344262295081966,
+        "n": 61,
+        "confidence": 0.95
+      },
+      "60": {
+        "point": 0.06557377049180328,
+        "lo": 0.01639344262295082,
+        "hi": 0.13114754098360656,
+        "n": 61,
+        "confidence": 0.95
+      }
+    }
+  }
+}

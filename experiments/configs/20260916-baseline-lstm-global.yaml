@@ -1,0 +1,32 @@
+# Línea base 3: un único LSTM global para los 12 pacientes, sin personalizar.
+exp_id: 20260916-baseline-lstm-global
+baseline: lstm_global
+description: >
+  Misma arquitectura que la línea base 2, pero ajustada sobre las 128.444
+  ventanas de los 12 pacientes agrupadas y aplicada a cada paciente sin ninguna
+  adaptación. El corte temporal de validación se hace DENTRO de cada paciente
+  antes de agrupar: las fechas están desplazadas un offset distinto por
+  paciente, así que una fecha de corte global caería en un punto distinto de
+  cada registro.
+seeds: [0, 1, 2]
+# Barrido propio sobre la pérdida media de VALIDACIÓN agrupada
+model:
+  hidden_size: 128
+  num_layers: 1
+  dropout: 0.0
+training:
+  lr: 0.001
+  batch_size: 256
+  max_epochs: 100
+  patience: 10
+  weight_decay: 0.001
+  grad_clip: 1.0
+data:
+  source: data/processed
+  patients: [559, 563, 570, 575, 588, 591, 540, 544, 552, 567, 584, 596]
+  history: 12
+  horizons_min: [30, 60]
+  val_fraction: 0.2
+evaluation:
+  event_tolerance_min: 15
+  sensitivity: true

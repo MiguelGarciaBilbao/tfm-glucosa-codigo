@@ -1,0 +1,25 @@
+exp_id: 20260915-baseline-persistencia
+model: persistence
+description: >
+  Predice y(t+PH) = valor CGM observado en t. Evaluada sobre el test oficial
+  (regla del BGLP Challenge ya aplicada en data/processed).
+
+data:
+  source: data/processed
+  split: test
+  patients: [540, 544, 552, 559, 563, 567, 570, 575, 584, 588, 591, 596]
+  history: 12          # 60 min
+  horizons_min: [30, 60]
+  target_feature: value
+
+evaluation:
+  hypo_threshold_mgdl: 70
+  min_event_minutes: 15
+  event_tolerance_min: 15        # estrictamente menor que el horizonte, ver metrics.py
+  event_onsets: cgm_oficial      # nunca leidos de la serie ventaneada
+  event_coverage: interseccion   # mismos 61 eventos en PH 30 y PH 60
+  sensitivity_tolerances_min: [5, 15]
+  bootstrap:
+    n_resamples: 2000
+    confidence: 0.95
+    seed: 0

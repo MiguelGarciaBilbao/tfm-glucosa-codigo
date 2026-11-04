@@ -1,0 +1,19 @@
+# Línea base 1: regresión ridge sobre la ventana de historia aplanada.
+exp_id: 20260916-baseline-ridge
+baseline: ridge
+description: >
+  Un modelo por paciente, ajustado solo con su split de entrenamiento.
+  Ve exactamente el mismo tensor que los LSTM, así que la diferencia entre
+  ambos es atribuible a la estructura temporal, no a entradas distintas.
+seeds: [0]
+model:
+  alpha: 1.0
+data:
+  source: data/processed
+  patients: [559, 563, 570, 575, 588, 591, 540, 544, 552, 567, 584, 596]
+  history: 12
+  horizons_min: [30, 60]
+  val_fraction: 0.2      # corte temporal dentro del train, nunca aleatorio
+evaluation:
+  event_tolerance_min: 15
+  sensitivity: true
