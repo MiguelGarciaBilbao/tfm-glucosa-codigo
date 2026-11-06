@@ -9,7 +9,7 @@ description: >
   paciente, así que una fecha de corte global caería en un punto distinto de
   cada registro.
 seeds: [0, 1, 2]
-# Barrido propio sobre la pérdida media de VALIDACIÓN agrupada
+# Barrido propio sobre la pérdida media de VALIDACIÓN agrupada.
 model:
   hidden_size: 128
   num_layers: 1

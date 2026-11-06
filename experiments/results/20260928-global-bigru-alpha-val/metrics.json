@@ -1,0 +1,390 @@
+{
+  "exp_id": "20260928-global-bigru-alpha-val",
+  "kind": "alpha_val",
+  "source": "20260916-global-bigru",
+  "config": {
+    "exp_id": "20260928-global-bigru-alpha-val",
+    "kind": "alpha_val",
+    "source": "20260916-global-bigru",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "budgets": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "alphas": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "evaluation": {
+      "event_tolerance_min": 15
+    }
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "by_seed": {
+    "0": {
+      "30": {
+        "0.5": {
+          "alpha": 0.5,
+          "within_budget": true,
+          "val_recall": 0.2028985507246377,
+          "val_false_alarms_per_day": 0.33474316340038096,
+          "test_recall": 0.11475409836065574,
+          "test_false_alarms_per_day": 0.21053815441713997
+        },
+        "1.0": {
+          "alpha": 0.3,
+          "within_budget": true,
+          "val_recall": 0.7971014492753623,
+          "val_false_alarms_per_day": 0.9763342265844446,
+          "test_recall": 0.7868852459016393,
+          "test_false_alarms_per_day": 0.9555193162008659
+        },
+        "2.0": {
+          "alpha": 0.2,
+          "within_budget": true,
+          "val_recall": 0.8840579710144928,
+          "val_false_alarms_per_day": 1.6737158170019049,
+          "test_recall": 0.9672131147540983,
+          "test_false_alarms_per_day": 1.5547432941573414
+        }
+      },
+      "60": {
+        "0.5": {
+          "alpha": 0.5,
+          "within_budget": true,
+          "val_recall": 0.07246376811594203,
+          "val_false_alarms_per_day": 0.2138636877280212,
+          "test_recall": 0.03278688524590164,
+          "test_false_alarms_per_day": 0.2348310183883484
+        },
+        "1.0": {
+          "alpha": 0.4,
+          "within_budget": true,
+          "val_recall": 0.13043478260869565,
+          "val_false_alarms_per_day": 0.5207115875117038,
+          "test_recall": 0.08196721311475409,
+          "test_false_alarms_per_day": 0.4129786875105438
+        },
+        "2.0": {
+          "alpha": 0.25,
+          "within_budget": true,
+          "val_recall": 0.37681159420289856,
+          "val_false_alarms_per_day": 1.692312659413037,
+          "test_recall": 0.39344262295081966,
+          "test_false_alarms_per_day": 1.481864702243716
+        }
+      }
+    },
+    "1": {
+      "30": {
+        "0.5": {
+          "alpha": 0.5,
+          "within_budget": true,
+          "val_recall": 0.2753623188405797,
+          "val_false_alarms_per_day": 0.4556226390727408,
+          "test_recall": 0.22950819672131148,
+          "test_false_alarms_per_day": 0.4858572794241691
+        },
+        "1.0": {
+          "alpha": 0.4,
+          "within_budget": true,
+          "val_recall": 0.4492753623188406,
+          "val_false_alarms_per_day": 0.6694863268007619,
+          "test_recall": 0.45901639344262296,
+          "test_false_alarms_per_day": 0.7368835404599898
+        },
+        "2.0": {
+          "alpha": 0.2,
+          "within_budget": true,
+          "val_recall": 0.927536231884058,
+          "val_false_alarms_per_day": 1.6272237109740741,
+          "test_recall": 0.9508196721311475,
+          "test_false_alarms_per_day": 1.6600123713659112
+        }
+      },
+      "60": {
+        "0.5": {
+          "alpha": 0.4,
+          "within_budget": true,
+          "val_recall": 0.10144927536231885,
+          "val_false_alarms_per_day": 0.4184289542504762,
+          "test_recall": 0.04918032786885246,
+          "test_false_alarms_per_day": 0.4696620367766968
+        },
+        "1.0": {
+          "alpha": 0.4,
+          "within_budget": true,
+          "val_recall": 0.10144927536231885,
+          "val_false_alarms_per_day": 0.4184289542504762,
+          "test_recall": 0.04918032786885246,
+          "test_false_alarms_per_day": 0.4696620367766968
+        },
+        "2.0": {
+          "alpha": 0.25,
+          "within_budget": true,
+          "val_recall": 0.3333333333333333,
+          "val_false_alarms_per_day": 1.6551189745907726,
+          "test_recall": 0.32786885245901637,
+          "test_false_alarms_per_day": 1.3846932463588821
+        }
+      }
+    },
+    "2": {
+      "30": {
+        "0.5": {
+          "alpha": 0.5,
+          "within_budget": true,
+          "val_recall": 0.2608695652173913,
+          "val_false_alarms_per_day": 0.46492106027830693,
+          "test_recall": 0.21311475409836064,
+          "test_false_alarms_per_day": 0.372490580891863
+        },
+        "1.0": {
+          "alpha": 0.4,
+          "within_budget": true,
+          "val_recall": 0.5652173913043478,
+          "val_false_alarms_per_day": 0.7159784328285926,
+          "test_recall": 0.47540983606557374,
+          "test_false_alarms_per_day": 0.6478097058988922
+        },
+        "2.0": {
+          "alpha": 0.2,
+          "within_budget": true,
+          "val_recall": 0.9420289855072463,
+          "val_false_alarms_per_day": 1.6737158170019049,
+          "test_recall": 0.9672131147540983,
+          "test_false_alarms_per_day": 1.5628409154810774
+        }
+      },
+      "60": {
+        "0.5": {
+          "alpha": 0.6,
+          "within_budget": true,
+          "val_recall": 0.014492753623188406,
+          "val_false_alarms_per_day": 0.06508894843896297,
+          "test_recall": 0.0,
+          "test_false_alarms_per_day": 0.056683349266153066
+        },
+        "1.0": {
+          "alpha": 0.4,
+          "within_budget": true,
+          "val_recall": 0.08695652173913043,
+          "val_false_alarms_per_day": 0.6229942207729313,
+          "test_recall": 0.08196721311475409,
+          "test_false_alarms_per_day": 0.4453691728054884
+        },
+        "2.0": {
+          "alpha": 0.2,
+          "within_budget": true,
+          "val_recall": 0.463768115942029,
+          "val_false_alarms_per_day": 1.9619668743744552,
+          "test_recall": 0.47540983606557374,
+          "test_false_alarms_per_day": 1.9758196029916213
+        }
+      }
+    }
+  },
+  "aggregate": {
+    "30": {
+      "0.5": {
+        "recall": {
+          "point": 0.18579234972677597,
+          "lo": 0.10928961748633878,
+          "hi": 0.26775956284153,
+          "n": 61,
+          "n_seeds": 3,
+          "confidence": 0.95
+        },
+        "alpha_by_seed": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "recall_by_seed": [
+          0.11475409836065574,
+          0.22950819672131148,
+          0.21311475409836064
+        ],
+        "false_alarms_per_day_by_seed": [
+          0.21053815441713997,
+          0.4858572794241691,
+          0.372490580891863
+        ],
+        "within_budget_by_seed": [
+          true,
+          true,
+          true
+        ]
+      },
+      "1.0": {
+        "recall": {
+          "point": 0.5737704918032787,
+          "lo": 0.475273224043716,
+          "hi": 0.6721311475409836,
+          "n": 61,
+          "n_seeds": 3,
+          "confidence": 0.95
+        },
+        "alpha_by_seed": [
+          0.3,
+          0.4,
+          0.4
+        ],
+        "recall_by_seed": [
+          0.7868852459016393,
+          0.45901639344262296,
+          0.47540983606557374
+        ],
+        "false_alarms_per_day_by_seed": [
+          0.9555193162008659,
+          0.7368835404599898,
+          0.6478097058988922
+        ],
+        "within_budget_by_seed": [
+          true,
+          true,
+          true
+        ]
+      },
+      "2.0": {
+        "recall": {
+          "point": 0.9617486338797815,
+          "lo": 0.9124316939890713,
+          "hi": 1.0,
+          "n": 61,
+          "n_seeds": 3,
+          "confidence": 0.95
+        },
+        "alpha_by_seed": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "recall_by_seed": [
+          0.9672131147540983,
+          0.9508196721311475,
+          0.9672131147540983
+        ],
+        "false_alarms_per_day_by_seed": [
+          1.5547432941573414,
+          1.6600123713659112,
+          1.5628409154810774
+        ],
+        "within_budget_by_seed": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    "60": {
+      "0.5": {
+        "recall": {
+          "point": 0.0273224043715847,
+          "lo": 0.0,
+          "hi": 0.06557377049180327,
+          "n": 61,
+          "n_seeds": 3,
+          "confidence": 0.95
+        },
+        "alpha_by_seed": [
+          0.5,
+          0.4,
+          0.6
+        ],
+        "recall_by_seed": [
+          0.03278688524590164,
+          0.04918032786885246,
+          0.0
+        ],
+        "false_alarms_per_day_by_seed": [
+          0.2348310183883484,
+          0.4696620367766968,
+          0.056683349266153066
+        ],
+        "within_budget_by_seed": [
+          true,
+          true,
+          true
+        ]
+      },
+      "1.0": {
+        "recall": {
+          "point": 0.07103825136612021,
+          "lo": 0.01639344262295082,
+          "hi": 0.13661202185792348,
+          "n": 61,
+          "n_seeds": 3,
+          "confidence": 0.95
+        },
+        "alpha_by_seed": [
+          0.4,
+          0.4,
+          0.4
+        ],
+        "recall_by_seed": [
+          0.08196721311475409,
+          0.04918032786885246,
+          0.08196721311475409
+        ],
+        "false_alarms_per_day_by_seed": [
+          0.4129786875105438,
+          0.4696620367766968,
+          0.4453691728054884
+        ],
+        "within_budget_by_seed": [
+          true,
+          true,
+          true
+        ]
+      },
+      "2.0": {
+        "recall": {
+          "point": 0.3989071038251366,
+          "lo": 0.2896174863387978,
+          "hi": 0.5027322404371585,
+          "n": 61,
+          "n_seeds": 3,
+          "confidence": 0.95
+        },
+        "alpha_by_seed": [
+          0.25,
+          0.25,
+          0.2
+        ],
+        "recall_by_seed": [
+          0.39344262295081966,
+          0.32786885245901637,
+          0.47540983606557374
+        ],
+        "false_alarms_per_day_by_seed": [
+          1.481864702243716,
+          1.3846932463588821,
+          1.9758196029916213
+        ],
+        "within_budget_by_seed": [
+          true,
+          true,
+          true
+        ]
+      }
+    }
+  }
+}

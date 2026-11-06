@@ -1,0 +1,36 @@
+# Fase 4 — ablación de entradas: solo la serie CGM.
+# Los hiperparámetros salen del barrido sobre la partición de VALIDACIÓN;
+# el test oficial no intervino en la selección.
+exp_id: 20260916-global-bigru-univariante
+kind: global
+architecture: bigru
+description: >
+  Mismo modelo con una sola feature, `value`. Mide cuánto aportan realmente
+  IOB, COB, basal, hora cíclica y las máscaras frente a la CGM desnuda. Si la
+  diferencia es pequeña, conviene saberlo antes de defender el preprocesado.
+seeds: [0, 1, 2]
+model:
+  hidden_size: 128
+  num_layers: 1
+  dropout: 0.0
+loss:
+  name: gaussian_nll
+  beta: 0.5          # corrección de Seitzer et al. (2022): la NLL pura subajusta mu
+training:
+  lr: 0.001
+  batch_size: 256
+  max_epochs: 100
+  patience: 10
+  weight_decay: 0.001
+  warmup_epochs: 5   # épocas con MSE antes de pasar a NLL
+  grad_clip: 1.0
+data:
+  source: data/processed
+  features: [value]
+  patients: [559, 563, 570, 575, 588, 591, 540, 544, 552, 567, 584, 596]
+  history: 12
+  horizons_min: [30, 60]
+  val_fraction: 0.2
+evaluation:
+  event_tolerance_min: 15
+  sensitivity: true

@@ -1,0 +1,37 @@
+# Fase 4 — ablación de historia: 120 min en lugar de 60.
+# Los hiperparámetros salen del barrido sobre la partición de VALIDACIÓN;
+# el test oficial no intervino en la selección.
+exp_id: 20260916-global-bigru-historia24
+kind: global
+architecture: bigru
+description: >
+  Mismo modelo sobre 24 pasos de historia. Requiere un dataset aparte generado
+  con `python -m tfm.data.build_processed --history 24 --out-dir
+  data/processed_h24`: una ventana más larga descarta más ventanas en los
+  bordes de segmento, así que el conjunto no es el mismo y hay que decirlo.
+seeds: [0, 1, 2]
+model:
+  hidden_size: 128
+  num_layers: 1
+  dropout: 0.0
+loss:
+  name: gaussian_nll
+  beta: 0.5          # corrección de Seitzer et al. (2022): la NLL pura subajusta mu
+training:
+  lr: 0.001
+  batch_size: 256
+  max_epochs: 100
+  patience: 10
+  weight_decay: 0.001
+  warmup_epochs: 5   # épocas con MSE antes de pasar a NLL
+  grad_clip: 1.0
+data:
+  source: data/processed_h24
+  processed_dir: data/processed_h24
+  patients: [559, 563, 570, 575, 588, 591, 540, 544, 552, 567, 584, 596]
+  history: 24
+  horizons_min: [30, 60]
+  val_fraction: 0.2
+evaluation:
+  event_tolerance_min: 15
+  sensitivity: true

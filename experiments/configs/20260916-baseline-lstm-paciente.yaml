@@ -6,7 +6,7 @@ description: >
   (PH 30 y 60 min). Early stopping sobre el corte temporal del 20 % final del
   train. El test oficial se toca una sola vez, al predecir.
 seeds: [0, 1, 2]
-# Seleccionados por barrido sobre la pérdida media de VALIDACIÓN de los 12
+# Seleccionados por barrido sobre la pérdida media de VALIDACIÓN de los 12 pacientes.
 model:
   hidden_size: 64
   dropout: 0.0

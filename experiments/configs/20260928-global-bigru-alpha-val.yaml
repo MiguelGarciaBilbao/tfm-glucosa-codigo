@@ -1,0 +1,11 @@
+# Corrección de la Fase 4: alfa elegido en el corte de validación (20 % final del
+# train de cada paciente), no en el test. Reutiliza los checkpoints y las
+# predicciones de test de 20260916-global-bigru; no reentrena.
+exp_id: 20260928-global-bigru-alpha-val
+kind: alpha_val
+source: 20260916-global-bigru
+seeds: [0, 1, 2]
+budgets: [0.5, 1.0, 2.0]
+alphas: [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7]
+evaluation:
+  event_tolerance_min: 15
