@@ -1,0 +1,25 @@
+# Fase 5 — backbones LOSO: un global-11 por paciente excluido y semilla (36 modelos).
+# Misma configuración que 20260916-global-bigru; solo cambia la cohorte de
+# entrenamiento (los otros 11). Los regímenes 20260928-loso-* los reutilizan.
+exp_id: 20260928-loso-backbones
+kind: loso_backbones
+architecture: bigru
+seeds: [0, 1, 2]
+model:
+  hidden_size: 128
+  num_layers: 1
+  dropout: 0.0
+loss:
+  name: gaussian_nll
+  beta: 0.5
+training:
+  lr: 0.001
+  batch_size: 256
+  max_epochs: 100
+  patience: 10
+  weight_decay: 0.001
+  warmup_epochs: 5
+  grad_clip: 1.0
+data:
+  patients: [559, 563, 570, 575, 588, 591, 540, 544, 552, 567, 584, 596]
+  val_fraction: 0.2

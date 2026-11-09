@@ -1,0 +1,10 @@
+# Fase 5, análisis de sensibilidad POST HOC (decidido el 2026-09-30, tras ver el test de
+# 20260928-loso-ft): la selección de 20260928-loso-ft maximiza el recall de desarrollo y elige
+# recetas sobreajustadas (RMSE de desarrollo peor que el del backbone sin adaptar). Aquí solo
+# compiten las recetas cuyo RMSE de desarrollo, en los dos horizontes y sobre los otros 11
+# pliegues, no supera al del backbone sin adaptar (20260928-loso-global) en esos mismos
+# pliegues. Reutiliza la tabla de desarrollo guardada; solo reentrena la receta elegida.
+exp_id: 20260930-loso-ft-rmse
+kind: loso_reselect
+source: 20260928-loso-ft
+reference: 20260928-loso-global

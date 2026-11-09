@@ -1,0 +1,14 @@
+# Fase 5 — régimen 1: el global-11 aplicado al paciente excluido sin adaptar (día 0).
+# Solo se elige alfa, en el desarrollo de los otros pliegues.
+exp_id: 20260928-loso-global
+kind: loso
+regime: global
+backbones: 20260928-loso-backbones
+patients: [559, 563, 570, 575, 588, 591, 540, 544, 552, 567, 584, 596]
+seeds: [0, 1, 2]
+selection:
+  budget: 1.0
+  alphas: [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7]
+  dev_start_days: 7
+evaluation:
+  event_tolerance_min: 15
