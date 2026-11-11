@@ -1,0 +1,11 @@
+# Fase 7 revisada — precisión y F1 de la alarma del modelo final, registradas a posteriori.
+# El capítulo 4 de la memoria define la precisión y el F1 de las alarmas, pero
+# 20260930-global-bigru-ensemble solo guardó el recall y las falsas alarmas al día. Aquí se
+# puntúan sus predicciones guardadas con el α que eligió en validación para cada horizonte
+# y presupuesto: no se entrena, no se predice y no se elige nada. El recall y las falsas
+# alarmas al día tienen que salir idénticos a los suyos; si no, el experimento falla.
+exp_id: 20261019-global-bigru-ensemble-precision
+kind: alarm_precision
+source: 20260930-global-bigru-ensemble
+evaluation:
+  event_tolerance_min: 15

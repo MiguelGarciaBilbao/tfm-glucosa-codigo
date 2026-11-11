@@ -1,0 +1,686 @@
+{
+  "exp_id": "20261019-global-bigru-ensemble-precision",
+  "kind": "alarm_precision",
+  "source": "20260930-global-bigru-ensemble",
+  "config": {
+    "exp_id": "20261019-global-bigru-ensemble-precision",
+    "kind": "alarm_precision",
+    "source": "20260930-global-bigru-ensemble",
+    "evaluation": {
+      "event_tolerance_min": 15
+    }
+  },
+  "tolerance_min": 15,
+  "by_horizon": {
+    "30": {
+      "0.5": {
+        "alpha": 0.5,
+        "n_events": 61,
+        "n_detected": 7,
+        "false_alarm_episodes": 38,
+        "alarms_on_short_dips": 62,
+        "span_days": 123.49305555555554,
+        "n_missed": 54,
+        "recall": 0.11475409836065574,
+        "precision": 0.15555555555555556,
+        "f1": 0.1320754716981132,
+        "false_alarms_per_day": 0.3077096103019738,
+        "per_patient": [
+          {
+            "patient": "540",
+            "n_events": 11,
+            "n_detected": 2,
+            "false_alarm_episodes": 6,
+            "alarms_on_short_dips": 6,
+            "span_days": 10.524305555555555
+          },
+          {
+            "patient": "544",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 3,
+            "alarms_on_short_dips": 1,
+            "span_days": 10.76736111111111
+          },
+          {
+            "patient": "552",
+            "n_events": 7,
+            "n_detected": 1,
+            "false_alarm_episodes": 2,
+            "alarms_on_short_dips": 3,
+            "span_days": 13.59375
+          },
+          {
+            "patient": "559",
+            "n_events": 3,
+            "n_detected": 1,
+            "false_alarm_episodes": 1,
+            "alarms_on_short_dips": 2,
+            "span_days": 9.909722222222221
+          },
+          {
+            "patient": "563",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 2,
+            "alarms_on_short_dips": 2,
+            "span_days": 9.26736111111111
+          },
+          {
+            "patient": "567",
+            "n_events": 5,
+            "n_detected": 1,
+            "false_alarm_episodes": 3,
+            "alarms_on_short_dips": 17,
+            "span_days": 9.84375
+          },
+          {
+            "patient": "570",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 0,
+            "alarms_on_short_dips": 1,
+            "span_days": 9.916666666666666
+          },
+          {
+            "patient": "575",
+            "n_events": 8,
+            "n_detected": 2,
+            "false_alarm_episodes": 3,
+            "alarms_on_short_dips": 11,
+            "span_days": 9.36111111111111
+          },
+          {
+            "patient": "584",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 3,
+            "alarms_on_short_dips": 4,
+            "span_days": 10.277777777777777
+          },
+          {
+            "patient": "588",
+            "n_events": 1,
+            "n_detected": 0,
+            "false_alarm_episodes": 2,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.92361111111111
+          },
+          {
+            "patient": "591",
+            "n_events": 11,
+            "n_detected": 0,
+            "false_alarm_episodes": 7,
+            "alarms_on_short_dips": 10,
+            "span_days": 9.805555555555555
+          },
+          {
+            "patient": "596",
+            "n_events": 7,
+            "n_detected": 0,
+            "false_alarm_episodes": 6,
+            "alarms_on_short_dips": 5,
+            "span_days": 10.302083333333332
+          }
+        ]
+      },
+      "1.0": {
+        "alpha": 0.3,
+        "n_events": 61,
+        "n_detected": 51,
+        "false_alarm_episodes": 119,
+        "alarms_on_short_dips": 29,
+        "span_days": 123.49305555555554,
+        "n_missed": 10,
+        "recall": 0.8360655737704918,
+        "precision": 0.3,
+        "f1": 0.4415584415584415,
+        "false_alarms_per_day": 0.9636169375246022,
+        "per_patient": [
+          {
+            "patient": "540",
+            "n_events": 11,
+            "n_detected": 11,
+            "false_alarm_episodes": 21,
+            "alarms_on_short_dips": 4,
+            "span_days": 10.524305555555555
+          },
+          {
+            "patient": "544",
+            "n_events": 2,
+            "n_detected": 2,
+            "false_alarm_episodes": 10,
+            "alarms_on_short_dips": 2,
+            "span_days": 10.76736111111111
+          },
+          {
+            "patient": "552",
+            "n_events": 7,
+            "n_detected": 6,
+            "false_alarm_episodes": 7,
+            "alarms_on_short_dips": 3,
+            "span_days": 13.59375
+          },
+          {
+            "patient": "559",
+            "n_events": 3,
+            "n_detected": 2,
+            "false_alarm_episodes": 11,
+            "alarms_on_short_dips": 1,
+            "span_days": 9.909722222222221
+          },
+          {
+            "patient": "563",
+            "n_events": 2,
+            "n_detected": 2,
+            "false_alarm_episodes": 6,
+            "alarms_on_short_dips": 1,
+            "span_days": 9.26736111111111
+          },
+          {
+            "patient": "567",
+            "n_events": 5,
+            "n_detected": 4,
+            "false_alarm_episodes": 9,
+            "alarms_on_short_dips": 3,
+            "span_days": 9.84375
+          },
+          {
+            "patient": "570",
+            "n_events": 2,
+            "n_detected": 2,
+            "false_alarm_episodes": 0,
+            "alarms_on_short_dips": 1,
+            "span_days": 9.916666666666666
+          },
+          {
+            "patient": "575",
+            "n_events": 8,
+            "n_detected": 7,
+            "false_alarm_episodes": 13,
+            "alarms_on_short_dips": 2,
+            "span_days": 9.36111111111111
+          },
+          {
+            "patient": "584",
+            "n_events": 2,
+            "n_detected": 1,
+            "false_alarm_episodes": 12,
+            "alarms_on_short_dips": 4,
+            "span_days": 10.277777777777777
+          },
+          {
+            "patient": "588",
+            "n_events": 1,
+            "n_detected": 1,
+            "false_alarm_episodes": 5,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.92361111111111
+          },
+          {
+            "patient": "591",
+            "n_events": 11,
+            "n_detected": 8,
+            "false_alarm_episodes": 17,
+            "alarms_on_short_dips": 5,
+            "span_days": 9.805555555555555
+          },
+          {
+            "patient": "596",
+            "n_events": 7,
+            "n_detected": 5,
+            "false_alarm_episodes": 8,
+            "alarms_on_short_dips": 3,
+            "span_days": 10.302083333333332
+          }
+        ]
+      },
+      "2.0": {
+        "alpha": 0.2,
+        "n_events": 61,
+        "n_detected": 58,
+        "false_alarm_episodes": 203,
+        "alarms_on_short_dips": 16,
+        "span_days": 123.49305555555554,
+        "n_missed": 3,
+        "recall": 0.9508196721311475,
+        "precision": 0.2222222222222222,
+        "f1": 0.36024844720496896,
+        "false_alarms_per_day": 1.643817128718439,
+        "per_patient": [
+          {
+            "patient": "540",
+            "n_events": 11,
+            "n_detected": 11,
+            "false_alarm_episodes": 23,
+            "alarms_on_short_dips": 3,
+            "span_days": 10.524305555555555
+          },
+          {
+            "patient": "544",
+            "n_events": 2,
+            "n_detected": 2,
+            "false_alarm_episodes": 21,
+            "alarms_on_short_dips": 1,
+            "span_days": 10.76736111111111
+          },
+          {
+            "patient": "552",
+            "n_events": 7,
+            "n_detected": 7,
+            "false_alarm_episodes": 21,
+            "alarms_on_short_dips": 0,
+            "span_days": 13.59375
+          },
+          {
+            "patient": "559",
+            "n_events": 3,
+            "n_detected": 2,
+            "false_alarm_episodes": 14,
+            "alarms_on_short_dips": 1,
+            "span_days": 9.909722222222221
+          },
+          {
+            "patient": "563",
+            "n_events": 2,
+            "n_detected": 2,
+            "false_alarm_episodes": 11,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.26736111111111
+          },
+          {
+            "patient": "567",
+            "n_events": 5,
+            "n_detected": 4,
+            "false_alarm_episodes": 15,
+            "alarms_on_short_dips": 2,
+            "span_days": 9.84375
+          },
+          {
+            "patient": "570",
+            "n_events": 2,
+            "n_detected": 2,
+            "false_alarm_episodes": 5,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.916666666666666
+          },
+          {
+            "patient": "575",
+            "n_events": 8,
+            "n_detected": 8,
+            "false_alarm_episodes": 19,
+            "alarms_on_short_dips": 1,
+            "span_days": 9.36111111111111
+          },
+          {
+            "patient": "584",
+            "n_events": 2,
+            "n_detected": 2,
+            "false_alarm_episodes": 21,
+            "alarms_on_short_dips": 4,
+            "span_days": 10.277777777777777
+          },
+          {
+            "patient": "588",
+            "n_events": 1,
+            "n_detected": 1,
+            "false_alarm_episodes": 6,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.92361111111111
+          },
+          {
+            "patient": "591",
+            "n_events": 11,
+            "n_detected": 10,
+            "false_alarm_episodes": 28,
+            "alarms_on_short_dips": 3,
+            "span_days": 9.805555555555555
+          },
+          {
+            "patient": "596",
+            "n_events": 7,
+            "n_detected": 7,
+            "false_alarm_episodes": 19,
+            "alarms_on_short_dips": 1,
+            "span_days": 10.302083333333332
+          }
+        ]
+      }
+    },
+    "60": {
+      "0.5": {
+        "alpha": 0.5,
+        "n_events": 61,
+        "n_detected": 2,
+        "false_alarm_episodes": 28,
+        "alarms_on_short_dips": 18,
+        "span_days": 123.49305555555554,
+        "n_missed": 59,
+        "recall": 0.03278688524590164,
+        "precision": 0.06666666666666667,
+        "f1": 0.04395604395604396,
+        "false_alarms_per_day": 0.2267333970646123,
+        "per_patient": [
+          {
+            "patient": "540",
+            "n_events": 11,
+            "n_detected": 0,
+            "false_alarm_episodes": 7,
+            "alarms_on_short_dips": 4,
+            "span_days": 10.524305555555555
+          },
+          {
+            "patient": "544",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 0,
+            "alarms_on_short_dips": 0,
+            "span_days": 10.76736111111111
+          },
+          {
+            "patient": "552",
+            "n_events": 7,
+            "n_detected": 0,
+            "false_alarm_episodes": 4,
+            "alarms_on_short_dips": 0,
+            "span_days": 13.59375
+          },
+          {
+            "patient": "559",
+            "n_events": 3,
+            "n_detected": 0,
+            "false_alarm_episodes": 0,
+            "alarms_on_short_dips": 4,
+            "span_days": 9.909722222222221
+          },
+          {
+            "patient": "563",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 1,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.26736111111111
+          },
+          {
+            "patient": "567",
+            "n_events": 5,
+            "n_detected": 1,
+            "false_alarm_episodes": 1,
+            "alarms_on_short_dips": 2,
+            "span_days": 9.84375
+          },
+          {
+            "patient": "570",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 1,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.916666666666666
+          },
+          {
+            "patient": "575",
+            "n_events": 8,
+            "n_detected": 1,
+            "false_alarm_episodes": 4,
+            "alarms_on_short_dips": 3,
+            "span_days": 9.36111111111111
+          },
+          {
+            "patient": "584",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 1,
+            "alarms_on_short_dips": 1,
+            "span_days": 10.277777777777777
+          },
+          {
+            "patient": "588",
+            "n_events": 1,
+            "n_detected": 0,
+            "false_alarm_episodes": 1,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.92361111111111
+          },
+          {
+            "patient": "591",
+            "n_events": 11,
+            "n_detected": 0,
+            "false_alarm_episodes": 8,
+            "alarms_on_short_dips": 3,
+            "span_days": 9.805555555555555
+          },
+          {
+            "patient": "596",
+            "n_events": 7,
+            "n_detected": 0,
+            "false_alarm_episodes": 0,
+            "alarms_on_short_dips": 1,
+            "span_days": 10.302083333333332
+          }
+        ]
+      },
+      "1.0": {
+        "alpha": 0.4,
+        "n_events": 61,
+        "n_detected": 4,
+        "false_alarm_episodes": 52,
+        "alarms_on_short_dips": 28,
+        "span_days": 123.49305555555554,
+        "n_missed": 57,
+        "recall": 0.06557377049180328,
+        "precision": 0.07142857142857142,
+        "f1": 0.06837606837606838,
+        "false_alarms_per_day": 0.42107630883428,
+        "per_patient": [
+          {
+            "patient": "540",
+            "n_events": 11,
+            "n_detected": 0,
+            "false_alarm_episodes": 13,
+            "alarms_on_short_dips": 3,
+            "span_days": 10.524305555555555
+          },
+          {
+            "patient": "544",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 0,
+            "alarms_on_short_dips": 0,
+            "span_days": 10.76736111111111
+          },
+          {
+            "patient": "552",
+            "n_events": 7,
+            "n_detected": 0,
+            "false_alarm_episodes": 4,
+            "alarms_on_short_dips": 1,
+            "span_days": 13.59375
+          },
+          {
+            "patient": "559",
+            "n_events": 3,
+            "n_detected": 0,
+            "false_alarm_episodes": 0,
+            "alarms_on_short_dips": 3,
+            "span_days": 9.909722222222221
+          },
+          {
+            "patient": "563",
+            "n_events": 2,
+            "n_detected": 1,
+            "false_alarm_episodes": 3,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.26736111111111
+          },
+          {
+            "patient": "567",
+            "n_events": 5,
+            "n_detected": 1,
+            "false_alarm_episodes": 3,
+            "alarms_on_short_dips": 8,
+            "span_days": 9.84375
+          },
+          {
+            "patient": "570",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 1,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.916666666666666
+          },
+          {
+            "patient": "575",
+            "n_events": 8,
+            "n_detected": 2,
+            "false_alarm_episodes": 9,
+            "alarms_on_short_dips": 8,
+            "span_days": 9.36111111111111
+          },
+          {
+            "patient": "584",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 2,
+            "alarms_on_short_dips": 2,
+            "span_days": 10.277777777777777
+          },
+          {
+            "patient": "588",
+            "n_events": 1,
+            "n_detected": 0,
+            "false_alarm_episodes": 3,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.92361111111111
+          },
+          {
+            "patient": "591",
+            "n_events": 11,
+            "n_detected": 0,
+            "false_alarm_episodes": 10,
+            "alarms_on_short_dips": 2,
+            "span_days": 9.805555555555555
+          },
+          {
+            "patient": "596",
+            "n_events": 7,
+            "n_detected": 0,
+            "false_alarm_episodes": 4,
+            "alarms_on_short_dips": 1,
+            "span_days": 10.302083333333332
+          }
+        ]
+      },
+      "2.0": {
+        "alpha": 0.25,
+        "n_events": 61,
+        "n_detected": 22,
+        "false_alarm_episodes": 166,
+        "alarms_on_short_dips": 41,
+        "span_days": 123.49305555555554,
+        "n_missed": 39,
+        "recall": 0.36065573770491804,
+        "precision": 0.11702127659574468,
+        "f1": 0.17670682730923695,
+        "false_alarms_per_day": 1.3442051397402015,
+        "per_patient": [
+          {
+            "patient": "540",
+            "n_events": 11,
+            "n_detected": 5,
+            "false_alarm_episodes": 30,
+            "alarms_on_short_dips": 8,
+            "span_days": 10.524305555555555
+          },
+          {
+            "patient": "544",
+            "n_events": 2,
+            "n_detected": 1,
+            "false_alarm_episodes": 14,
+            "alarms_on_short_dips": 5,
+            "span_days": 10.76736111111111
+          },
+          {
+            "patient": "552",
+            "n_events": 7,
+            "n_detected": 2,
+            "false_alarm_episodes": 8,
+            "alarms_on_short_dips": 4,
+            "span_days": 13.59375
+          },
+          {
+            "patient": "559",
+            "n_events": 3,
+            "n_detected": 1,
+            "false_alarm_episodes": 9,
+            "alarms_on_short_dips": 2,
+            "span_days": 9.909722222222221
+          },
+          {
+            "patient": "563",
+            "n_events": 2,
+            "n_detected": 1,
+            "false_alarm_episodes": 14,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.26736111111111
+          },
+          {
+            "patient": "567",
+            "n_events": 5,
+            "n_detected": 2,
+            "false_alarm_episodes": 15,
+            "alarms_on_short_dips": 10,
+            "span_days": 9.84375
+          },
+          {
+            "patient": "570",
+            "n_events": 2,
+            "n_detected": 1,
+            "false_alarm_episodes": 3,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.916666666666666
+          },
+          {
+            "patient": "575",
+            "n_events": 8,
+            "n_detected": 4,
+            "false_alarm_episodes": 12,
+            "alarms_on_short_dips": 3,
+            "span_days": 9.36111111111111
+          },
+          {
+            "patient": "584",
+            "n_events": 2,
+            "n_detected": 0,
+            "false_alarm_episodes": 13,
+            "alarms_on_short_dips": 2,
+            "span_days": 10.277777777777777
+          },
+          {
+            "patient": "588",
+            "n_events": 1,
+            "n_detected": 1,
+            "false_alarm_episodes": 8,
+            "alarms_on_short_dips": 0,
+            "span_days": 9.92361111111111
+          },
+          {
+            "patient": "591",
+            "n_events": 11,
+            "n_detected": 1,
+            "false_alarm_episodes": 22,
+            "alarms_on_short_dips": 5,
+            "span_days": 9.805555555555555
+          },
+          {
+            "patient": "596",
+            "n_events": 7,
+            "n_detected": 3,
+            "false_alarm_episodes": 18,
+            "alarms_on_short_dips": 2,
+            "span_days": 10.302083333333332
+          }
+        ]
+      }
+    }
+  }
+}

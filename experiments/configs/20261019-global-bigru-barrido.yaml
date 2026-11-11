@@ -1,0 +1,40 @@
+# Fase 4 revisada — barrido de hiperparámetros del BiGRU global, registrado a posteriori.
+# El modelo de 20260916-global-bigru (1 capa, 128 unidades, lr 0,001) se eligió con un
+# barrido sobre la partición de VALIDACIÓN cuyos resultados no se guardaron. Aquí se repite
+# una rejilla pequeña alrededor de esa elección para dejarla registrada. Solo se lee el
+# train y su corte de validación: el test oficial ni se carga, así que este experimento no
+# puede mover ninguna cifra de resultados. model, loss, training y data copian los de
+# 20260916-global-bigru; la rejilla sobrescribe los valores que barre.
+exp_id: 20261019-global-bigru-barrido
+kind: global_sweep
+architecture: bigru
+seeds: [0, 1, 2]
+grid:
+  model.hidden_size: [64, 128, 256]
+  model.num_layers: [1, 2]
+  training.lr: [0.0003, 0.001]   # con punto decimal: PyYAML lee «1e-3» como texto
+chosen:                          # el punto que entrenó 20260916-global-bigru
+  model.hidden_size: 128
+  model.num_layers: 1
+  training.lr: 0.001
+model:
+  hidden_size: 128
+  num_layers: 1
+  dropout: 0.0
+loss:
+  name: gaussian_nll
+  beta: 0.5
+training:
+  lr: 0.001
+  batch_size: 256
+  max_epochs: 100
+  patience: 10
+  weight_decay: 0.001
+  warmup_epochs: 5
+  grad_clip: 1.0
+data:
+  source: data/processed
+  patients: [559, 563, 570, 575, 588, 591, 540, 544, 552, 567, 584, 596]
+  history: 12
+  horizons_min: [30, 60]
+  val_fraction: 0.2

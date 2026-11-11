@@ -1,0 +1,10 @@
+# Fase 7 — ensemble de las 3 semillas del global de la Fase 4 (mezcla resumida por sus momentos).
+# α elegido en validación (último 20 % temporal del train), un solo pase por el test.
+exp_id: 20260930-global-bigru-ensemble
+kind: ensemble
+source: 20260916-global-bigru
+seeds: [0, 1, 2]
+budgets: [0.5, 1.0, 2.0]
+alphas: [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7]
+evaluation:
+  event_tolerance_min: 15
