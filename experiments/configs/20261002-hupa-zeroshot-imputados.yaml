@@ -1,0 +1,13 @@
+# Fase 8A.3, sensibilidad — igual que 20261002-hupa-zeroshot, pero is_imputed marca todas las celdas interpoladas.
+exp_id: 20261002-hupa-zeroshot-imputados
+kind: external_hupa
+source: 20260916-global-bigru
+ohio_alpha_source: 20260930-global-bigru-ensemble
+seeds: [0, 1, 2]
+budgets: [0.5, 1.0, 2.0]
+alphas: [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7]
+imputed_flag: all        # sensibilidad: is_imputed = 1 en toda celda interpolada (2 de cada 3)
+scaler: ohio             # el escalador que viaja con el modelo
+ridge_alpha: 1.0
+evaluation:
+  event_tolerance_min: 15

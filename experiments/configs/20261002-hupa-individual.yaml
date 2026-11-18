@@ -1,0 +1,14 @@
+# Fase 8A.4 (E3): adaptación con los primeros N días de cada paciente de HUPA-UCM.
+# Modelo base: el global de Ohio con los 12 pacientes (una por semilla); receta y α elegidos
+# con la tabla de desarrollo de Ohio sobre sus 12 pliegues (HUPA no tiene tramo de desarrollo).
+# Test: el 30 % final de cada paciente, con el protocolo de eventos de HUPA. N = 7 solo para
+# pacientes con >= 7 días de adaptación. Ver src/tfm/training/external_adapt.py.
+# BiGRU entrenado desde cero solo con los N días del paciente (escalador propio).
+exp_id: 20261002-hupa-individual
+kind: external_hupa_adapt
+source: 20260928-loso-individual
+backbone: 20260916-global-bigru
+selection_rule: spec
+group: principal
+imputed_flag: dropouts
+seeds: [0, 1, 2]

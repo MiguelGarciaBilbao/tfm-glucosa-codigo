@@ -1,0 +1,15 @@
+# Fase 8A.4 (E3): adaptación con los primeros N días de cada paciente de HUPA-UCM.
+# Modelo base: el global de Ohio con los 12 pacientes (una por semilla); receta y α elegidos
+# con la tabla de desarrollo de Ohio sobre sus 12 pliegues (HUPA no tiene tramo de desarrollo).
+# Test: el 30 % final de cada paciente, con el protocolo de eventos de HUPA. N = 7 solo para
+# pacientes con >= 7 días de adaptación. Ver src/tfm/training/external_adapt.py.
+# Restricción de RMSE PREESPECIFICADA (en Ohio fue post hoc), con la loss ponderada.
+exp_id: 20261002-hupa-ft-ponderada-rmse
+kind: external_hupa_adapt
+source: 20260928-loso-ft-ponderada
+backbone: 20260916-global-bigru
+selection_rule: rmse_guard
+group: principal
+imputed_flag: dropouts
+seeds: [0, 1, 2]
+reference: 20260928-loso-global

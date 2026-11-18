@@ -1,0 +1,16 @@
+# Fase 8A.3 — validación externa en HUPA-UCM sin reentrenar (E1 y E2 del plan).
+# Los modelos de la Fase 4 (3 semillas) y su ensemble, con el escalador de Ohio, sobre
+# 23 pacientes de HUPA. α de Ohio tomado del ensemble de la Fase 7 (elegido en su
+# validación) frente a α recalibrado con el 70 % inicial de HUPA y puntuado en el 30 % final.
+exp_id: 20261002-hupa-zeroshot
+kind: external_hupa
+source: 20260916-global-bigru
+ohio_alpha_source: 20260930-global-bigru-ensemble
+seeds: [0, 1, 2]
+budgets: [0.5, 1.0, 2.0]
+alphas: [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7]
+imputed_flag: dropouts   # is_imputed solo en huecos que exceden la cadencia del Libre
+scaler: ohio             # el escalador que viaja con el modelo
+ridge_alpha: 1.0
+evaluation:
+  event_tolerance_min: 15

@@ -1,0 +1,3080 @@
+{
+  "exp_id": "20261002-hupa-global",
+  "kind": "external_hupa_adapt",
+  "regime": "global",
+  "selection_rule": "spec",
+  "source": "20260928-loso-global",
+  "backbone": "20260916-global-bigru",
+  "reference": null,
+  "config": {
+    "exp_id": "20261002-hupa-global",
+    "kind": "external_hupa_adapt",
+    "source": "20260928-loso-global",
+    "backbone": "20260916-global-bigru",
+    "selection_rule": "spec",
+    "group": "principal",
+    "imputed_flag": "dropouts",
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "patients": [
+    "HUPA0001P",
+    "HUPA0002P",
+    "HUPA0003P",
+    "HUPA0004P",
+    "HUPA0005P",
+    "HUPA0006P",
+    "HUPA0007P",
+    "HUPA0016P",
+    "HUPA0017P",
+    "HUPA0022P",
+    "HUPA0023P",
+    "HUPA0024P",
+    "HUPA0025P"
+  ],
+  "n_days": [
+    0
+  ],
+  "excluded_by_days": {
+    "0": []
+  },
+  "ohio_choices": {
+    "0|0": {
+      "recipe": "none",
+      "alpha": {
+        "30": 0.4,
+        "60": 0.4
+      },
+      "within_budget": {
+        "30": true,
+        "60": true
+      },
+      "dev_recall": {
+        "30": 0.3836065573770492,
+        "60": 0.11147540983606558
+      },
+      "dev_false_alarms_per_day": {
+        "30": 0.6844213118075143,
+        "60": 0.4577768774056817
+      },
+      "dev_rmse": {
+        "30": 20.72214309347756,
+        "60": 33.55313491847221
+      }
+    },
+    "1|0": {
+      "recipe": "none",
+      "alpha": {
+        "30": 0.4,
+        "60": 0.4
+      },
+      "within_budget": {
+        "30": true,
+        "60": true
+      },
+      "dev_recall": {
+        "30": 0.4163934426229508,
+        "60": 0.11475409836065574
+      },
+      "dev_false_alarms_per_day": {
+        "30": 0.7180813763226379,
+        "60": 0.5497810537470197
+      },
+      "dev_rmse": {
+        "30": 20.906868165219862,
+        "60": 33.82580272503579
+      }
+    },
+    "2|0": {
+      "recipe": "none",
+      "alpha": {
+        "30": 0.3,
+        "60": 0.4
+      },
+      "within_budget": {
+        "30": true,
+        "60": true
+      },
+      "dev_recall": {
+        "30": 0.6655737704918033,
+        "60": 0.11475409836065574
+      },
+      "dev_false_alarms_per_day": {
+        "30": 0.9716538623365695,
+        "60": 0.49816895482383006
+      },
+      "dev_rmse": {
+        "30": 20.754915822506838,
+        "60": 33.62043912567604
+      }
+    }
+  },
+  "by_days": {
+    "0": {
+      "by_seed": {
+        "0": {
+          "30": {
+            "summary": {
+              "horizon_min": 30,
+              "n_patients": 13,
+              "tolerance_min": 15,
+              "pooled_event_recall": {
+                "point": 0.2127659574468085,
+                "lo": 0.10638297872340426,
+                "hi": 0.3404255319148936,
+                "n": 47,
+                "confidence": 0.95
+              },
+              "rmse_pooled": 18.549805308844263,
+              "rmse_mean_over_patients": 18.29744372942968,
+              "rmse_std_over_patients": 3.8508396848359094,
+              "false_alarms_per_day_median": 0.4868977176669484,
+              "clarke_AB_pooled": 96.62865642042637,
+              "parkes_AB_pooled": 99.62816063460585,
+              "parkes_DE_pooled": 0.0
+            },
+            "per_patient": [
+              {
+                "patient": "HUPA0001P",
+                "n_events": 1,
+                "n_detected": 1,
+                "recall": 1.0,
+                "false_alarms_per_day": 0.4931506849315069,
+                "median_lead_time_min": 15.0,
+                "rmse": 26.66165712063192,
+                "mae": 18.85857798955212,
+                "grmse": 31.40294983570304,
+                "clarke_AB": 98.63013698630137,
+                "clarke_DE": 1.36986301369863,
+                "parkes_AB": 99.72602739726027,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0002P",
+                "n_events": 7,
+                "n_detected": 2,
+                "recall": 0.2857142857142857,
+                "false_alarms_per_day": 0.9381107491856676,
+                "median_lead_time_min": 15.0,
+                "rmse": 16.785243626731372,
+                "mae": 13.11913219531933,
+                "grmse": 21.200035027057726,
+                "clarke_AB": 91.95804195804195,
+                "clarke_DE": 8.041958041958042,
+                "parkes_AB": 98.95104895104895,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0003P",
+                "n_events": 6,
+                "n_detected": 2,
+                "recall": 0.3333333333333333,
+                "false_alarms_per_day": 0.5203252032520326,
+                "median_lead_time_min": 30.0,
+                "rmse": 17.316935670427508,
+                "mae": 13.437407394935345,
+                "grmse": 19.00563960884592,
+                "clarke_AB": 96.55172413793105,
+                "clarke_DE": 3.4482758620689653,
+                "parkes_AB": 99.71264367816092,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0004P",
+                "n_events": 3,
+                "n_detected": 2,
+                "recall": 0.6666666666666666,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": 15.0,
+                "rmse": 22.787879638322877,
+                "mae": 16.530543372744607,
+                "grmse": 29.083624800703912,
+                "clarke_AB": 99.13419913419912,
+                "clarke_DE": 0.8658008658008658,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0005P",
+                "n_events": 2,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.2553191489361702,
+                "median_lead_time_min": null,
+                "rmse": 16.219957812886534,
+                "mae": 12.427321227167694,
+                "grmse": 17.397064162312486,
+                "clarke_AB": 99.15492957746478,
+                "clarke_DE": 0.8450704225352113,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0006P",
+                "n_events": 1,
+                "n_detected": 1,
+                "recall": 1.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": 15.0,
+                "rmse": 19.43605978147393,
+                "mae": 14.688231004391863,
+                "grmse": 24.33108681893375,
+                "clarke_AB": 98.36065573770492,
+                "clarke_DE": 1.639344262295082,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0007P",
+                "n_events": 4,
+                "n_detected": 1,
+                "recall": 0.25,
+                "false_alarms_per_day": 0.5092838196286472,
+                "median_lead_time_min": 15.0,
+                "rmse": 21.415527649998687,
+                "mae": 15.752264114682465,
+                "grmse": 25.754913962360238,
+                "clarke_AB": 97.73371104815864,
+                "clarke_DE": 2.26628895184136,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0016P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.4868977176669484,
+                "median_lead_time_min": null,
+                "rmse": 19.571336032353898,
+                "mae": 14.35540080520342,
+                "grmse": 21.82288754685351,
+                "clarke_AB": 98.86792452830188,
+                "clarke_DE": 1.1320754716981132,
+                "parkes_AB": 99.24528301886792,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0017P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.5691699604743083,
+                "median_lead_time_min": null,
+                "rmse": 19.980494303822955,
+                "mae": 14.25034191992975,
+                "grmse": 22.853260369644378,
+                "clarke_AB": 99.67741935483872,
+                "clarke_DE": 0.3225806451612903,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0022P",
+                "n_events": 9,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 14.066835467250039,
+                "mae": 11.027724216408926,
+                "grmse": 17.592229269915293,
+                "clarke_AB": 88.76712328767124,
+                "clarke_DE": 11.232876712328768,
+                "parkes_AB": 97.80821917808218,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0023P",
+                "n_events": 3,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.748051948051948,
+                "median_lead_time_min": null,
+                "rmse": 14.378220417877275,
+                "mae": 11.304427515376698,
+                "grmse": 15.322545790044675,
+                "clarke_AB": 97.72727272727272,
+                "clarke_DE": 2.272727272727273,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0024P",
+                "n_events": 3,
+                "n_detected": 1,
+                "recall": 0.3333333333333333,
+                "false_alarms_per_day": 0.3408284023668639,
+                "median_lead_time_min": 15.0,
+                "rmse": 16.12800305935764,
+                "mae": 11.436128525506883,
+                "grmse": 18.13727948068935,
+                "clarke_AB": 98.01587301587301,
+                "clarke_DE": 1.9841269841269842,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0025P",
+                "n_events": 6,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.2426284751474305,
+                "median_lead_time_min": null,
+                "rmse": 13.11861790145119,
+                "mae": 10.335169681042514,
+                "grmse": 15.315304200324423,
+                "clarke_AB": 94.03794037940379,
+                "clarke_DE": 5.9620596205962055,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              }
+            ]
+          },
+          "60": {
+            "summary": {
+              "horizon_min": 60,
+              "n_patients": 13,
+              "tolerance_min": 15,
+              "pooled_event_recall": {
+                "point": 0.0425531914893617,
+                "lo": 0.0,
+                "hi": 0.10638297872340426,
+                "n": 47,
+                "confidence": 0.95
+              },
+              "rmse_pooled": 34.403775110710704,
+              "rmse_mean_over_patients": 34.11366849674017,
+              "rmse_std_over_patients": 7.1156317042720785,
+              "false_alarms_per_day_median": 0.0,
+              "clarke_AB_pooled": 91.6212196331185,
+              "parkes_AB_pooled": 95.31482399603372,
+              "parkes_DE_pooled": 0.07436787307882994
+            },
+            "per_patient": [
+              {
+                "patient": "HUPA0001P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.4931506849315069,
+                "median_lead_time_min": null,
+                "rmse": 46.154260213411604,
+                "mae": 33.415859839034404,
+                "grmse": 57.54999774521093,
+                "clarke_AB": 93.69863013698631,
+                "clarke_DE": 6.027397260273973,
+                "parkes_AB": 96.71232876712328,
+                "parkes_DE": 0.273972602739726
+              },
+              {
+                "patient": "HUPA0002P",
+                "n_events": 7,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 33.23604877966948,
+                "mae": 26.72828391548637,
+                "grmse": 43.230256737384885,
+                "clarke_AB": 76.92307692307692,
+                "clarke_DE": 23.076923076923077,
+                "parkes_AB": 86.36363636363637,
+                "parkes_DE": 0.6993006993006993
+              },
+              {
+                "patient": "HUPA0003P",
+                "n_events": 6,
+                "n_detected": 1,
+                "recall": 0.16666666666666666,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": 60.0,
+                "rmse": 33.41290390576598,
+                "mae": 26.192904483312848,
+                "grmse": 38.86712459788466,
+                "clarke_AB": 88.50574712643677,
+                "clarke_DE": 11.494252873563218,
+                "parkes_AB": 93.9655172413793,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0004P",
+                "n_events": 3,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 46.40656001034463,
+                "mae": 33.41294002120113,
+                "grmse": 60.067994716266156,
+                "clarke_AB": 91.77489177489177,
+                "clarke_DE": 7.359307359307359,
+                "parkes_AB": 97.83549783549785,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0005P",
+                "n_events": 2,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 25.8513464899752,
+                "mae": 20.467615885130115,
+                "grmse": 28.851540518152653,
+                "clarke_AB": 98.30985915492958,
+                "clarke_DE": 1.6901408450704225,
+                "parkes_AB": 98.30985915492957,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0006P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 37.831661598874916,
+                "mae": 27.14181651964865,
+                "grmse": 50.23360190645331,
+                "clarke_AB": 93.44262295081968,
+                "clarke_DE": 6.557377049180328,
+                "parkes_AB": 97.26775956284153,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0007P",
+                "n_events": 4,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 41.16207969001923,
+                "mae": 30.266322127820413,
+                "grmse": 51.659084425791846,
+                "clarke_AB": 93.48441926345609,
+                "clarke_DE": 6.232294617563739,
+                "parkes_AB": 96.88385269121814,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0016P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 31.573864960125054,
+                "mae": 24.890022824845225,
+                "grmse": 36.61325348922625,
+                "clarke_AB": 97.73584905660378,
+                "clarke_DE": 2.2641509433962264,
+                "parkes_AB": 98.11320754716982,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0017P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.2845849802371542,
+                "median_lead_time_min": null,
+                "rmse": 36.11602093771164,
+                "mae": 26.978719428277785,
+                "grmse": 43.748943784373964,
+                "clarke_AB": 98.38709677419355,
+                "clarke_DE": 1.2903225806451613,
+                "parkes_AB": 98.38709677419354,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0022P",
+                "n_events": 9,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 28.087436515703832,
+                "mae": 22.217740662457192,
+                "grmse": 35.93356343718761,
+                "clarke_AB": 82.46575342465754,
+                "clarke_DE": 17.534246575342465,
+                "parkes_AB": 89.04109589041096,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0023P",
+                "n_events": 3,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.9974025974025973,
+                "median_lead_time_min": null,
+                "rmse": 26.967693573782334,
+                "mae": 22.540688601407137,
+                "grmse": 29.284156465914073,
+                "clarke_AB": 94.31818181818181,
+                "clarke_DE": 5.681818181818182,
+                "parkes_AB": 96.875,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0024P",
+                "n_events": 3,
+                "n_detected": 1,
+                "recall": 0.3333333333333333,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": 60.0,
+                "rmse": 30.977896146705753,
+                "mae": 21.796225260174463,
+                "grmse": 36.09007830086123,
+                "clarke_AB": 94.84126984126983,
+                "clarke_DE": 5.158730158730159,
+                "parkes_AB": 96.03174603174602,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0025P",
+                "n_events": 6,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 25.699917635532472,
+                "mae": 20.36332905260205,
+                "grmse": 30.739486544022697,
+                "clarke_AB": 88.88888888888889,
+                "clarke_DE": 11.11111111111111,
+                "parkes_AB": 94.85094850948511,
+                "parkes_DE": 0.0
+              }
+            ]
+          }
+        },
+        "1": {
+          "30": {
+            "summary": {
+              "horizon_min": 30,
+              "n_patients": 13,
+              "tolerance_min": 15,
+              "pooled_event_recall": {
+                "point": 0.3191489361702128,
+                "lo": 0.19148936170212766,
+                "hi": 0.44680851063829785,
+                "n": 47,
+                "confidence": 0.95
+              },
+              "rmse_pooled": 18.63597546436561,
+              "rmse_mean_over_patients": 18.344172219344316,
+              "rmse_std_over_patients": 4.150061344105956,
+              "false_alarms_per_day_median": 0.2553191489361702,
+              "clarke_AB_pooled": 97.69459593455628,
+              "parkes_AB_pooled": 99.65294992563213,
+              "parkes_DE_pooled": 0.0
+            },
+            "per_patient": [
+              {
+                "patient": "HUPA0001P",
+                "n_events": 1,
+                "n_detected": 1,
+                "recall": 1.0,
+                "false_alarms_per_day": 0.7397260273972603,
+                "median_lead_time_min": 15.0,
+                "rmse": 27.07512900967311,
+                "mae": 19.207976605141,
+                "grmse": 31.802293896780153,
+                "clarke_AB": 98.35616438356165,
+                "clarke_DE": 1.643835616438356,
+                "parkes_AB": 99.45205479452055,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0002P",
+                "n_events": 7,
+                "n_detected": 2,
+                "recall": 0.2857142857142857,
+                "false_alarms_per_day": 0.6254071661237784,
+                "median_lead_time_min": 15.0,
+                "rmse": 16.084870362322043,
+                "mae": 11.92385856254951,
+                "grmse": 19.6851682952433,
+                "clarke_AB": 94.05594405594407,
+                "clarke_DE": 5.944055944055944,
+                "parkes_AB": 98.95104895104895,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0003P",
+                "n_events": 6,
+                "n_detected": 2,
+                "recall": 0.3333333333333333,
+                "false_alarms_per_day": 0.5203252032520326,
+                "median_lead_time_min": 30.0,
+                "rmse": 17.47678798852038,
+                "mae": 13.04839340297655,
+                "grmse": 18.841521898258108,
+                "clarke_AB": 97.1264367816092,
+                "clarke_DE": 2.8735632183908044,
+                "parkes_AB": 99.71264367816092,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0004P",
+                "n_events": 3,
+                "n_detected": 2,
+                "recall": 0.6666666666666666,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": 22.5,
+                "rmse": 22.996249695207926,
+                "mae": 16.020628429594495,
+                "grmse": 28.835014814861424,
+                "clarke_AB": 99.13419913419912,
+                "clarke_DE": 0.8658008658008658,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0005P",
+                "n_events": 2,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.2553191489361702,
+                "median_lead_time_min": null,
+                "rmse": 16.135661847800645,
+                "mae": 12.366335500797755,
+                "grmse": 17.292510489597262,
+                "clarke_AB": 99.1549295774648,
+                "clarke_DE": 0.8450704225352113,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0006P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 19.450841258227282,
+                "mae": 14.684161368614989,
+                "grmse": 24.216557403503383,
+                "clarke_AB": 98.90710382513662,
+                "clarke_DE": 1.092896174863388,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0007P",
+                "n_events": 4,
+                "n_detected": 1,
+                "recall": 0.25,
+                "false_alarms_per_day": 0.5092838196286472,
+                "median_lead_time_min": 15.0,
+                "rmse": 21.849867227723475,
+                "mae": 15.690944077272928,
+                "grmse": 25.846710989084936,
+                "clarke_AB": 98.01699716713881,
+                "clarke_DE": 1.9830028328611897,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0016P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.2434488588334742,
+                "median_lead_time_min": null,
+                "rmse": 20.00977387106301,
+                "mae": 14.537589537422612,
+                "grmse": 22.214366977138372,
+                "clarke_AB": 99.62264150943396,
+                "clarke_DE": 0.37735849056603776,
+                "parkes_AB": 99.24528301886792,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0017P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.5691699604743083,
+                "median_lead_time_min": null,
+                "rmse": 20.30404570021882,
+                "mae": 14.435193830920804,
+                "grmse": 23.1964380120073,
+                "clarke_AB": 99.67741935483872,
+                "clarke_DE": 0.3225806451612903,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0022P",
+                "n_events": 9,
+                "n_detected": 3,
+                "recall": 0.3333333333333333,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": 30.0,
+                "rmse": 13.657263906974705,
+                "mae": 10.317442133655288,
+                "grmse": 16.496130618290806,
+                "clarke_AB": 93.6986301369863,
+                "clarke_DE": 6.301369863013699,
+                "parkes_AB": 98.35616438356163,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0023P",
+                "n_events": 3,
+                "n_detected": 1,
+                "recall": 0.3333333333333333,
+                "false_alarms_per_day": 0.49870129870129865,
+                "median_lead_time_min": 45.0,
+                "rmse": 13.971505409099695,
+                "mae": 10.460133292458274,
+                "grmse": 14.700516556708193,
+                "clarke_AB": 98.29545454545453,
+                "clarke_DE": 1.7045454545454546,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0024P",
+                "n_events": 3,
+                "n_detected": 2,
+                "recall": 0.6666666666666666,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": 15.0,
+                "rmse": 17.048966713840507,
+                "mae": 11.776074909028553,
+                "grmse": 18.939609614685374,
+                "clarke_AB": 98.01587301587301,
+                "clarke_DE": 1.9841269841269842,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0025P",
+                "n_events": 6,
+                "n_detected": 1,
+                "recall": 0.16666666666666666,
+                "false_alarms_per_day": 0.2426284751474305,
+                "median_lead_time_min": 15.0,
+                "rmse": 12.413275860804513,
+                "mae": 9.310868653501599,
+                "grmse": 13.972398838991657,
+                "clarke_AB": 97.289972899729,
+                "clarke_DE": 2.710027100271003,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              }
+            ]
+          },
+          "60": {
+            "summary": {
+              "horizon_min": 60,
+              "n_patients": 13,
+              "tolerance_min": 15,
+              "pooled_event_recall": {
+                "point": 0.02127659574468085,
+                "lo": 0.0,
+                "hi": 0.06382978723404255,
+                "n": 47,
+                "confidence": 0.95
+              },
+              "rmse_pooled": 34.388845346527454,
+              "rmse_mean_over_patients": 34.08245170262941,
+              "rmse_std_over_patients": 7.2048726850747045,
+              "false_alarms_per_day_median": 0.0,
+              "clarke_AB_pooled": 91.7203767972236,
+              "parkes_AB_pooled": 95.26524541398115,
+              "parkes_DE_pooled": 0.07436787307882994
+            },
+            "per_patient": [
+              {
+                "patient": "HUPA0001P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.24657534246575344,
+                "median_lead_time_min": null,
+                "rmse": 46.51635223563107,
+                "mae": 33.87378153343723,
+                "grmse": 57.6244143208486,
+                "clarke_AB": 93.15068493150685,
+                "clarke_DE": 6.301369863013699,
+                "parkes_AB": 96.98630136986301,
+                "parkes_DE": 0.273972602739726
+              },
+              {
+                "patient": "HUPA0002P",
+                "n_events": 7,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.3127035830618892,
+                "median_lead_time_min": null,
+                "rmse": 32.67074051122505,
+                "mae": 25.832928504143563,
+                "grmse": 42.06658568543348,
+                "clarke_AB": 77.27272727272728,
+                "clarke_DE": 22.727272727272727,
+                "parkes_AB": 88.1118881118881,
+                "parkes_DE": 0.6993006993006993
+              },
+              {
+                "patient": "HUPA0003P",
+                "n_events": 6,
+                "n_detected": 1,
+                "recall": 0.16666666666666666,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": 60.0,
+                "rmse": 33.57617961448177,
+                "mae": 26.209947081817976,
+                "grmse": 38.7668316156466,
+                "clarke_AB": 89.08045977011494,
+                "clarke_DE": 10.919540229885058,
+                "parkes_AB": 94.54022988505747,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0004P",
+                "n_events": 3,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 46.21014278970876,
+                "mae": 33.1785334137095,
+                "grmse": 59.321963072932775,
+                "clarke_AB": 92.20779220779221,
+                "clarke_DE": 6.4935064935064934,
+                "parkes_AB": 96.96969696969697,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0005P",
+                "n_events": 2,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 25.740547215439385,
+                "mae": 20.338516450264084,
+                "grmse": 28.546251582245088,
+                "clarke_AB": 98.30985915492958,
+                "clarke_DE": 1.6901408450704225,
+                "parkes_AB": 98.30985915492957,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0006P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 37.34066853987843,
+                "mae": 27.151125798459912,
+                "grmse": 49.534199759339444,
+                "clarke_AB": 94.53551912568307,
+                "clarke_DE": 5.46448087431694,
+                "parkes_AB": 96.72131147540983,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0007P",
+                "n_events": 4,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 41.06428563834316,
+                "mae": 30.17071911430899,
+                "grmse": 50.86827075480936,
+                "clarke_AB": 92.91784702549575,
+                "clarke_DE": 6.798866855524079,
+                "parkes_AB": 96.88385269121812,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0016P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 32.073997184745934,
+                "mae": 25.359624380435584,
+                "grmse": 36.81772673517745,
+                "clarke_AB": 97.73584905660377,
+                "clarke_DE": 2.2641509433962264,
+                "parkes_AB": 97.35849056603774,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0017P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.2845849802371542,
+                "median_lead_time_min": null,
+                "rmse": 36.21796074151242,
+                "mae": 26.924206026138798,
+                "grmse": 43.56752119254835,
+                "clarke_AB": 98.38709677419355,
+                "clarke_DE": 1.2903225806451613,
+                "parkes_AB": 98.06451612903226,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0022P",
+                "n_events": 9,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 28.003806771614723,
+                "mae": 21.896503061790987,
+                "grmse": 35.63848552931938,
+                "clarke_AB": 82.46575342465754,
+                "clarke_DE": 17.534246575342465,
+                "parkes_AB": 89.31506849315069,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0023P",
+                "n_events": 3,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.49870129870129865,
+                "median_lead_time_min": null,
+                "rmse": 26.98183277420537,
+                "mae": 22.029161019758746,
+                "grmse": 29.22775660486604,
+                "clarke_AB": 94.31818181818181,
+                "clarke_DE": 5.681818181818182,
+                "parkes_AB": 96.30681818181819,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0024P",
+                "n_events": 3,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 32.084216903556246,
+                "mae": 22.553659681289915,
+                "grmse": 37.28078358730362,
+                "clarke_AB": 94.44444444444446,
+                "clarke_DE": 5.555555555555555,
+                "parkes_AB": 94.04761904761905,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0025P",
+                "n_events": 6,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 24.591141213840032,
+                "mae": 19.373582814120986,
+                "grmse": 29.22779180274018,
+                "clarke_AB": 89.70189701897019,
+                "clarke_DE": 10.29810298102981,
+                "parkes_AB": 95.3929539295393,
+                "parkes_DE": 0.0
+              }
+            ]
+          }
+        },
+        "2": {
+          "30": {
+            "summary": {
+              "horizon_min": 30,
+              "n_patients": 13,
+              "tolerance_min": 15,
+              "pooled_event_recall": {
+                "point": 0.2553191489361702,
+                "lo": 0.14893617021276595,
+                "hi": 0.3829787234042553,
+                "n": 47,
+                "confidence": 0.95
+              },
+              "rmse_pooled": 18.681437231283095,
+              "rmse_mean_over_patients": 18.40911109754008,
+              "rmse_std_over_patients": 4.005273924759984,
+              "false_alarms_per_day_median": 0.3408284023668639,
+              "clarke_AB_pooled": 97.4714923153198,
+              "parkes_AB_pooled": 99.62816063460585,
+              "parkes_DE_pooled": 0.0
+            },
+            "per_patient": [
+              {
+                "patient": "HUPA0001P",
+                "n_events": 1,
+                "n_detected": 1,
+                "recall": 1.0,
+                "false_alarms_per_day": 1.2328767123287672,
+                "median_lead_time_min": 15.0,
+                "rmse": 27.07066984088267,
+                "mae": 19.115254315938035,
+                "grmse": 31.789503105966574,
+                "clarke_AB": 98.63013698630138,
+                "clarke_DE": 1.36986301369863,
+                "parkes_AB": 99.45205479452055,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0002P",
+                "n_events": 7,
+                "n_detected": 2,
+                "recall": 0.2857142857142857,
+                "false_alarms_per_day": 0.6254071661237784,
+                "median_lead_time_min": 15.0,
+                "rmse": 16.430613701430865,
+                "mae": 12.39627651401333,
+                "grmse": 20.186769269731162,
+                "clarke_AB": 93.35664335664336,
+                "clarke_DE": 6.643356643356643,
+                "parkes_AB": 98.6013986013986,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0003P",
+                "n_events": 6,
+                "n_detected": 2,
+                "recall": 0.3333333333333333,
+                "false_alarms_per_day": 0.5203252032520326,
+                "median_lead_time_min": 30.0,
+                "rmse": 17.670608410717648,
+                "mae": 13.292163936571143,
+                "grmse": 19.091798476118687,
+                "clarke_AB": 96.26436781609196,
+                "clarke_DE": 3.735632183908046,
+                "parkes_AB": 99.42528735632185,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0004P",
+                "n_events": 3,
+                "n_detected": 2,
+                "recall": 0.6666666666666666,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": 15.0,
+                "rmse": 22.976706536052397,
+                "mae": 16.308538527715776,
+                "grmse": 28.58913350115025,
+                "clarke_AB": 99.13419913419914,
+                "clarke_DE": 0.8658008658008658,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0005P",
+                "n_events": 2,
+                "n_detected": 1,
+                "recall": 0.5,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": 45.0,
+                "rmse": 16.105184927005148,
+                "mae": 12.442047677913182,
+                "grmse": 17.127161400474513,
+                "clarke_AB": 99.43661971830986,
+                "clarke_DE": 0.5633802816901409,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0006P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 19.465535330265226,
+                "mae": 14.69776891489498,
+                "grmse": 23.951013442754626,
+                "clarke_AB": 98.90710382513662,
+                "clarke_DE": 1.092896174863388,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0007P",
+                "n_events": 4,
+                "n_detected": 1,
+                "recall": 0.25,
+                "false_alarms_per_day": 0.5092838196286472,
+                "median_lead_time_min": 15.0,
+                "rmse": 21.600344342741813,
+                "mae": 15.833244928894908,
+                "grmse": 25.44683793241981,
+                "clarke_AB": 98.01699716713881,
+                "clarke_DE": 1.9830028328611897,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0016P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.2434488588334742,
+                "median_lead_time_min": null,
+                "rmse": 20.02967926937938,
+                "mae": 14.572212046497272,
+                "grmse": 22.132717666889626,
+                "clarke_AB": 99.62264150943396,
+                "clarke_DE": 0.37735849056603776,
+                "parkes_AB": 99.24528301886792,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0017P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.5691699604743083,
+                "median_lead_time_min": null,
+                "rmse": 20.133221569415856,
+                "mae": 14.399100199053365,
+                "grmse": 22.923976256782815,
+                "clarke_AB": 99.6774193548387,
+                "clarke_DE": 0.3225806451612903,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0022P",
+                "n_events": 9,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.25196850393700787,
+                "median_lead_time_min": null,
+                "rmse": 14.062098456608233,
+                "mae": 10.863839847094392,
+                "grmse": 17.111001190978058,
+                "clarke_AB": 92.05479452054794,
+                "clarke_DE": 7.945205479452055,
+                "parkes_AB": 98.63013698630137,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0023P",
+                "n_events": 3,
+                "n_detected": 1,
+                "recall": 0.3333333333333333,
+                "false_alarms_per_day": 0.9974025974025973,
+                "median_lead_time_min": 45.0,
+                "rmse": 13.944899344016799,
+                "mae": 10.610010363838889,
+                "grmse": 14.671828707218015,
+                "clarke_AB": 98.29545454545455,
+                "clarke_DE": 1.7045454545454546,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0024P",
+                "n_events": 3,
+                "n_detected": 2,
+                "recall": 0.6666666666666666,
+                "false_alarms_per_day": 0.3408284023668639,
+                "median_lead_time_min": 22.5,
+                "rmse": 16.745185494805376,
+                "mae": 11.51602287897988,
+                "grmse": 18.571199027117153,
+                "clarke_AB": 98.01587301587303,
+                "clarke_DE": 1.9841269841269842,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0025P",
+                "n_events": 6,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 13.083697044699628,
+                "mae": 10.126357267219523,
+                "grmse": 14.737151644081012,
+                "clarke_AB": 97.289972899729,
+                "clarke_DE": 2.710027100271003,
+                "parkes_AB": 100.0,
+                "parkes_DE": 0.0
+              }
+            ]
+          },
+          "60": {
+            "summary": {
+              "horizon_min": 60,
+              "n_patients": 13,
+              "tolerance_min": 15,
+              "pooled_event_recall": {
+                "point": 0.02127659574468085,
+                "lo": 0.0,
+                "hi": 0.06382978723404255,
+                "n": 47,
+                "confidence": 0.95
+              },
+              "rmse_pooled": 34.553074219131176,
+              "rmse_mean_over_patients": 34.263986594072165,
+              "rmse_std_over_patients": 6.88667833207752,
+              "false_alarms_per_day_median": 0.0,
+              "clarke_AB_pooled": 91.398116013882,
+              "parkes_AB_pooled": 94.99256321269212,
+              "parkes_DE_pooled": 0.0991571641051066
+            },
+            "per_patient": [
+              {
+                "patient": "HUPA0001P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.4931506849315069,
+                "median_lead_time_min": null,
+                "rmse": 46.41213135884796,
+                "mae": 34.09495536072613,
+                "grmse": 57.411119243437284,
+                "clarke_AB": 93.6986301369863,
+                "clarke_DE": 6.027397260273972,
+                "parkes_AB": 96.7123287671233,
+                "parkes_DE": 0.547945205479452
+              },
+              {
+                "patient": "HUPA0002P",
+                "n_events": 7,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 33.48683040516159,
+                "mae": 26.990568281053662,
+                "grmse": 43.15389799488128,
+                "clarke_AB": 74.82517482517483,
+                "clarke_DE": 25.174825174825173,
+                "parkes_AB": 86.36363636363636,
+                "parkes_DE": 0.6993006993006993
+              },
+              {
+                "patient": "HUPA0003P",
+                "n_events": 6,
+                "n_detected": 1,
+                "recall": 0.16666666666666666,
+                "false_alarms_per_day": 0.2601626016260163,
+                "median_lead_time_min": 60.0,
+                "rmse": 33.92597184742128,
+                "mae": 26.465769581411077,
+                "grmse": 39.31917188368633,
+                "clarke_AB": 88.50574712643679,
+                "clarke_DE": 11.494252873563218,
+                "parkes_AB": 93.9655172413793,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0004P",
+                "n_events": 3,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 45.586802637599526,
+                "mae": 33.41054574545328,
+                "grmse": 57.902927618159836,
+                "clarke_AB": 92.20779220779221,
+                "clarke_DE": 6.4935064935064934,
+                "parkes_AB": 97.40259740259741,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0005P",
+                "n_events": 2,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 25.90502177652248,
+                "mae": 20.557498985612895,
+                "grmse": 28.771709141459816,
+                "clarke_AB": 98.30985915492957,
+                "clarke_DE": 1.6901408450704225,
+                "parkes_AB": 98.30985915492958,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0006P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 36.86530415907526,
+                "mae": 27.37496973256596,
+                "grmse": 48.14649648672912,
+                "clarke_AB": 93.98907103825135,
+                "clarke_DE": 6.0109289617486334,
+                "parkes_AB": 96.17486338797815,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0007P",
+                "n_events": 4,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 41.02845002521547,
+                "mae": 30.93244026335373,
+                "grmse": 50.45483988530897,
+                "clarke_AB": 93.48441926345609,
+                "clarke_DE": 6.232294617563739,
+                "parkes_AB": 95.46742209631728,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0016P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 32.89078050367641,
+                "mae": 26.05500721481611,
+                "grmse": 37.885615244868454,
+                "clarke_AB": 98.11320754716982,
+                "clarke_DE": 1.8867924528301887,
+                "parkes_AB": 97.35849056603773,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0017P",
+                "n_events": 1,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.2845849802371542,
+                "median_lead_time_min": null,
+                "rmse": 36.05960469142271,
+                "mae": 26.740056117888418,
+                "grmse": 43.292302355197684,
+                "clarke_AB": 98.38709677419354,
+                "clarke_DE": 1.2903225806451613,
+                "parkes_AB": 98.06451612903226,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0022P",
+                "n_events": 9,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 29.118000848719745,
+                "mae": 23.59645726452135,
+                "grmse": 36.9825053497251,
+                "clarke_AB": 80.27397260273972,
+                "clarke_DE": 19.726027397260275,
+                "parkes_AB": 89.04109589041096,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0023P",
+                "n_events": 3,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.748051948051948,
+                "median_lead_time_min": null,
+                "rmse": 26.29917062559746,
+                "mae": 21.447204069657758,
+                "grmse": 28.498642259875442,
+                "clarke_AB": 94.31818181818181,
+                "clarke_DE": 5.681818181818182,
+                "parkes_AB": 96.5909090909091,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0024P",
+                "n_events": 3,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 31.945014484861975,
+                "mae": 22.27794014461457,
+                "grmse": 37.11944393591408,
+                "clarke_AB": 94.84126984126985,
+                "clarke_DE": 4.761904761904762,
+                "parkes_AB": 94.44444444444444,
+                "parkes_DE": 0.0
+              },
+              {
+                "patient": "HUPA0025P",
+                "n_events": 6,
+                "n_detected": 0,
+                "recall": 0.0,
+                "false_alarms_per_day": 0.0,
+                "median_lead_time_min": null,
+                "rmse": 25.908742358816262,
+                "mae": 20.726998533336772,
+                "grmse": 30.67224472932368,
+                "clarke_AB": 89.4308943089431,
+                "clarke_DE": 10.56910569105691,
+                "parkes_AB": 95.6639566395664,
+                "parkes_DE": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "selection": {
+        "0": {
+          "HUPA0001P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0002P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0003P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0004P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0005P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0006P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0007P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0016P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0017P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0022P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0023P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0024P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          },
+          "HUPA0025P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.3836065573770492,
+              "60": 0.11147540983606558
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.6844213118075143,
+              "60": 0.4577768774056817
+            },
+            "dev_rmse": {
+              "30": 20.72214309347756,
+              "60": 33.55313491847221
+            }
+          }
+        },
+        "1": {
+          "HUPA0001P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0002P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0003P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0004P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0005P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0006P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0007P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0016P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0017P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0022P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0023P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0024P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          },
+          "HUPA0025P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.4,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.4163934426229508,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.7180813763226379,
+              "60": 0.5497810537470197
+            },
+            "dev_rmse": {
+              "30": 20.906868165219862,
+              "60": 33.82580272503579
+            }
+          }
+        },
+        "2": {
+          "HUPA0001P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0002P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0003P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0004P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0005P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0006P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0007P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0016P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0017P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0022P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0023P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0024P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          },
+          "HUPA0025P": {
+            "recipe": "none",
+            "alpha": {
+              "30": 0.3,
+              "60": 0.4
+            },
+            "within_budget": {
+              "30": true,
+              "60": true
+            },
+            "dev_recall": {
+              "30": 0.6655737704918033,
+              "60": 0.11475409836065574
+            },
+            "dev_false_alarms_per_day": {
+              "30": 0.9716538623365695,
+              "60": 0.49816895482383006
+            },
+            "dev_rmse": {
+              "30": 20.754915822506838,
+              "60": 33.62043912567604
+            }
+          }
+        }
+      },
+      "alarm": {
+        "30": {
+          "recall": {
+            "point": 0.6312056737588652,
+            "lo": 0.5319148936170212,
+            "hi": 0.7304964539007093,
+            "n": 47,
+            "n_seeds": 3,
+            "confidence": 0.95
+          },
+          "recall_by_seed": [
+            0.48936170212765956,
+            0.5106382978723404,
+            0.8936170212765957
+          ],
+          "false_alarms_per_day_by_seed": [
+            0.4587315377932233,
+            0.5629887054735013,
+            0.9174630755864466
+          ],
+          "per_patient_by_seed": {
+            "0": [
+              {
+                "patient": "HUPA0001P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 5,
+                "span_days": 4.055555555555555
+              },
+              {
+                "patient": "HUPA0002P",
+                "alpha": 0.4,
+                "n_events": 7,
+                "n_detected": 3,
+                "false_alarm_episodes": 1,
+                "span_days": 3.197916666666667
+              },
+              {
+                "patient": "HUPA0003P",
+                "alpha": 0.4,
+                "n_events": 6,
+                "n_detected": 3,
+                "false_alarm_episodes": 2,
+                "span_days": 3.84375
+              },
+              {
+                "patient": "HUPA0004P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 2,
+                "false_alarm_episodes": 0,
+                "span_days": 3.961805555555556
+              },
+              {
+                "patient": "HUPA0005P",
+                "alpha": 0.4,
+                "n_events": 2,
+                "n_detected": 0,
+                "false_alarm_episodes": 3,
+                "span_days": 3.916666666666667
+              },
+              {
+                "patient": "HUPA0006P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 0,
+                "span_days": 2.399305555555556
+              },
+              {
+                "patient": "HUPA0007P",
+                "alpha": 0.4,
+                "n_events": 4,
+                "n_detected": 2,
+                "false_alarm_episodes": 2,
+                "span_days": 3.9270833333333335
+              },
+              {
+                "patient": "HUPA0016P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 2,
+                "span_days": 4.107638888888889
+              },
+              {
+                "patient": "HUPA0017P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 1,
+                "span_days": 3.513888888888889
+              },
+              {
+                "patient": "HUPA0022P",
+                "alpha": 0.4,
+                "n_events": 9,
+                "n_detected": 3,
+                "false_alarm_episodes": 2,
+                "span_days": 3.96875
+              },
+              {
+                "patient": "HUPA0023P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 2,
+                "false_alarm_episodes": 3,
+                "span_days": 4.010416666666667
+              },
+              {
+                "patient": "HUPA0024P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 3,
+                "false_alarm_episodes": 1,
+                "span_days": 2.9340277777777777
+              },
+              {
+                "patient": "HUPA0025P",
+                "alpha": 0.4,
+                "n_events": 6,
+                "n_detected": 2,
+                "false_alarm_episodes": 0,
+                "span_days": 4.121527777777778
+              }
+            ],
+            "1": [
+              {
+                "patient": "HUPA0001P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 5,
+                "span_days": 4.055555555555555
+              },
+              {
+                "patient": "HUPA0002P",
+                "alpha": 0.4,
+                "n_events": 7,
+                "n_detected": 3,
+                "false_alarm_episodes": 3,
+                "span_days": 3.197916666666667
+              },
+              {
+                "patient": "HUPA0003P",
+                "alpha": 0.4,
+                "n_events": 6,
+                "n_detected": 3,
+                "false_alarm_episodes": 5,
+                "span_days": 3.84375
+              },
+              {
+                "patient": "HUPA0004P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 2,
+                "false_alarm_episodes": 0,
+                "span_days": 3.961805555555556
+              },
+              {
+                "patient": "HUPA0005P",
+                "alpha": 0.4,
+                "n_events": 2,
+                "n_detected": 0,
+                "false_alarm_episodes": 2,
+                "span_days": 3.916666666666667
+              },
+              {
+                "patient": "HUPA0006P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 0,
+                "span_days": 2.399305555555556
+              },
+              {
+                "patient": "HUPA0007P",
+                "alpha": 0.4,
+                "n_events": 4,
+                "n_detected": 2,
+                "false_alarm_episodes": 2,
+                "span_days": 3.9270833333333335
+              },
+              {
+                "patient": "HUPA0016P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 1,
+                "span_days": 4.107638888888889
+              },
+              {
+                "patient": "HUPA0017P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 2,
+                "span_days": 3.513888888888889
+              },
+              {
+                "patient": "HUPA0022P",
+                "alpha": 0.4,
+                "n_events": 9,
+                "n_detected": 3,
+                "false_alarm_episodes": 1,
+                "span_days": 3.96875
+              },
+              {
+                "patient": "HUPA0023P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 2,
+                "false_alarm_episodes": 4,
+                "span_days": 4.010416666666667
+              },
+              {
+                "patient": "HUPA0024P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 3,
+                "false_alarm_episodes": 1,
+                "span_days": 2.9340277777777777
+              },
+              {
+                "patient": "HUPA0025P",
+                "alpha": 0.4,
+                "n_events": 6,
+                "n_detected": 3,
+                "false_alarm_episodes": 1,
+                "span_days": 4.121527777777778
+              }
+            ],
+            "2": [
+              {
+                "patient": "HUPA0001P",
+                "alpha": 0.3,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 7,
+                "span_days": 4.055555555555555
+              },
+              {
+                "patient": "HUPA0002P",
+                "alpha": 0.3,
+                "n_events": 7,
+                "n_detected": 5,
+                "false_alarm_episodes": 7,
+                "span_days": 3.197916666666667
+              },
+              {
+                "patient": "HUPA0003P",
+                "alpha": 0.3,
+                "n_events": 6,
+                "n_detected": 6,
+                "false_alarm_episodes": 8,
+                "span_days": 3.84375
+              },
+              {
+                "patient": "HUPA0004P",
+                "alpha": 0.3,
+                "n_events": 3,
+                "n_detected": 3,
+                "false_alarm_episodes": 1,
+                "span_days": 3.961805555555556
+              },
+              {
+                "patient": "HUPA0005P",
+                "alpha": 0.3,
+                "n_events": 2,
+                "n_detected": 2,
+                "false_alarm_episodes": 2,
+                "span_days": 3.916666666666667
+              },
+              {
+                "patient": "HUPA0006P",
+                "alpha": 0.3,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 1,
+                "span_days": 2.399305555555556
+              },
+              {
+                "patient": "HUPA0007P",
+                "alpha": 0.3,
+                "n_events": 4,
+                "n_detected": 4,
+                "false_alarm_episodes": 4,
+                "span_days": 3.9270833333333335
+              },
+              {
+                "patient": "HUPA0016P",
+                "alpha": 0.3,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 5,
+                "span_days": 4.107638888888889
+              },
+              {
+                "patient": "HUPA0017P",
+                "alpha": 0.3,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 1,
+                "span_days": 3.513888888888889
+              },
+              {
+                "patient": "HUPA0022P",
+                "alpha": 0.3,
+                "n_events": 9,
+                "n_detected": 8,
+                "false_alarm_episodes": 2,
+                "span_days": 3.96875
+              },
+              {
+                "patient": "HUPA0023P",
+                "alpha": 0.3,
+                "n_events": 3,
+                "n_detected": 2,
+                "false_alarm_episodes": 6,
+                "span_days": 4.010416666666667
+              },
+              {
+                "patient": "HUPA0024P",
+                "alpha": 0.3,
+                "n_events": 3,
+                "n_detected": 3,
+                "false_alarm_episodes": 0,
+                "span_days": 2.9340277777777777
+              },
+              {
+                "patient": "HUPA0025P",
+                "alpha": 0.3,
+                "n_events": 6,
+                "n_detected": 5,
+                "false_alarm_episodes": 0,
+                "span_days": 4.121527777777778
+              }
+            ]
+          }
+        },
+        "60": {
+          "recall": {
+            "point": 0.08510638297872339,
+            "lo": 0.028368794326241134,
+            "hi": 0.15602836879432622,
+            "n": 47,
+            "n_seeds": 3,
+            "confidence": 0.95
+          },
+          "recall_by_seed": [
+            0.1276595744680851,
+            0.0851063829787234,
+            0.0425531914893617
+          ],
+          "false_alarms_per_day_by_seed": [
+            0.31277150304083406,
+            0.29192006950477845,
+            0.41702867072111205
+          ],
+          "per_patient_by_seed": {
+            "0": [
+              {
+                "patient": "HUPA0001P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 3,
+                "span_days": 4.055555555555555
+              },
+              {
+                "patient": "HUPA0002P",
+                "alpha": 0.4,
+                "n_events": 7,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 3.197916666666667
+              },
+              {
+                "patient": "HUPA0003P",
+                "alpha": 0.4,
+                "n_events": 6,
+                "n_detected": 1,
+                "false_alarm_episodes": 4,
+                "span_days": 3.84375
+              },
+              {
+                "patient": "HUPA0004P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 3.961805555555556
+              },
+              {
+                "patient": "HUPA0005P",
+                "alpha": 0.4,
+                "n_events": 2,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 3.916666666666667
+              },
+              {
+                "patient": "HUPA0006P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 2.399305555555556
+              },
+              {
+                "patient": "HUPA0007P",
+                "alpha": 0.4,
+                "n_events": 4,
+                "n_detected": 1,
+                "false_alarm_episodes": 0,
+                "span_days": 3.9270833333333335
+              },
+              {
+                "patient": "HUPA0016P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 1,
+                "span_days": 4.107638888888889
+              },
+              {
+                "patient": "HUPA0017P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 2,
+                "span_days": 3.513888888888889
+              },
+              {
+                "patient": "HUPA0022P",
+                "alpha": 0.4,
+                "n_events": 9,
+                "n_detected": 2,
+                "false_alarm_episodes": 0,
+                "span_days": 3.96875
+              },
+              {
+                "patient": "HUPA0023P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 0,
+                "false_alarm_episodes": 4,
+                "span_days": 4.010416666666667
+              },
+              {
+                "patient": "HUPA0024P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 1,
+                "false_alarm_episodes": 1,
+                "span_days": 2.9340277777777777
+              },
+              {
+                "patient": "HUPA0025P",
+                "alpha": 0.4,
+                "n_events": 6,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 4.121527777777778
+              }
+            ],
+            "1": [
+              {
+                "patient": "HUPA0001P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 3,
+                "span_days": 4.055555555555555
+              },
+              {
+                "patient": "HUPA0002P",
+                "alpha": 0.4,
+                "n_events": 7,
+                "n_detected": 1,
+                "false_alarm_episodes": 0,
+                "span_days": 3.197916666666667
+              },
+              {
+                "patient": "HUPA0003P",
+                "alpha": 0.4,
+                "n_events": 6,
+                "n_detected": 1,
+                "false_alarm_episodes": 4,
+                "span_days": 3.84375
+              },
+              {
+                "patient": "HUPA0004P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 0,
+                "false_alarm_episodes": 1,
+                "span_days": 3.961805555555556
+              },
+              {
+                "patient": "HUPA0005P",
+                "alpha": 0.4,
+                "n_events": 2,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 3.916666666666667
+              },
+              {
+                "patient": "HUPA0006P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 2.399305555555556
+              },
+              {
+                "patient": "HUPA0007P",
+                "alpha": 0.4,
+                "n_events": 4,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 3.9270833333333335
+              },
+              {
+                "patient": "HUPA0016P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 1,
+                "false_alarm_episodes": 1,
+                "span_days": 4.107638888888889
+              },
+              {
+                "patient": "HUPA0017P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 2,
+                "span_days": 3.513888888888889
+              },
+              {
+                "patient": "HUPA0022P",
+                "alpha": 0.4,
+                "n_events": 9,
+                "n_detected": 1,
+                "false_alarm_episodes": 2,
+                "span_days": 3.96875
+              },
+              {
+                "patient": "HUPA0023P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 0,
+                "false_alarm_episodes": 1,
+                "span_days": 4.010416666666667
+              },
+              {
+                "patient": "HUPA0024P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 2.9340277777777777
+              },
+              {
+                "patient": "HUPA0025P",
+                "alpha": 0.4,
+                "n_events": 6,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 4.121527777777778
+              }
+            ],
+            "2": [
+              {
+                "patient": "HUPA0001P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 4,
+                "span_days": 4.055555555555555
+              },
+              {
+                "patient": "HUPA0002P",
+                "alpha": 0.4,
+                "n_events": 7,
+                "n_detected": 0,
+                "false_alarm_episodes": 1,
+                "span_days": 3.197916666666667
+              },
+              {
+                "patient": "HUPA0003P",
+                "alpha": 0.4,
+                "n_events": 6,
+                "n_detected": 1,
+                "false_alarm_episodes": 4,
+                "span_days": 3.84375
+              },
+              {
+                "patient": "HUPA0004P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 3.961805555555556
+              },
+              {
+                "patient": "HUPA0005P",
+                "alpha": 0.4,
+                "n_events": 2,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 3.916666666666667
+              },
+              {
+                "patient": "HUPA0006P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 1,
+                "span_days": 2.399305555555556
+              },
+              {
+                "patient": "HUPA0007P",
+                "alpha": 0.4,
+                "n_events": 4,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 3.9270833333333335
+              },
+              {
+                "patient": "HUPA0016P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 1,
+                "span_days": 4.107638888888889
+              },
+              {
+                "patient": "HUPA0017P",
+                "alpha": 0.4,
+                "n_events": 1,
+                "n_detected": 0,
+                "false_alarm_episodes": 2,
+                "span_days": 3.513888888888889
+              },
+              {
+                "patient": "HUPA0022P",
+                "alpha": 0.4,
+                "n_events": 9,
+                "n_detected": 0,
+                "false_alarm_episodes": 2,
+                "span_days": 3.96875
+              },
+              {
+                "patient": "HUPA0023P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 0,
+                "false_alarm_episodes": 4,
+                "span_days": 4.010416666666667
+              },
+              {
+                "patient": "HUPA0024P",
+                "alpha": 0.4,
+                "n_events": 3,
+                "n_detected": 1,
+                "false_alarm_episodes": 1,
+                "span_days": 2.9340277777777777
+              },
+              {
+                "patient": "HUPA0025P",
+                "alpha": 0.4,
+                "n_events": 6,
+                "n_detected": 0,
+                "false_alarm_episodes": 0,
+                "span_days": 4.121527777777778
+              }
+            ]
+          }
+        }
+      },
+      "aggregate": {
+        "30": {
+          "rmse_pooled": {
+            "mean": 18.622406001497655,
+            "std": 0.06685685075689136
+          },
+          "clarke_AB_pooled": {
+            "mean": 97.2649148901008,
+            "std": 0.5621943048479362
+          },
+          "parkes_AB_pooled": {
+            "mean": 99.63642373161461,
+            "std": 0.014312103847043067
+          },
+          "parkes_DE_pooled": {
+            "mean": 0.0,
+            "std": 0.0
+          }
+        },
+        "60": {
+          "rmse_pooled": {
+            "mean": 34.44856489212311,
+            "std": 0.09081505402960906
+          },
+          "clarke_AB_pooled": {
+            "mean": 91.5799041480747,
+            "std": 0.16505523347742512
+          },
+          "parkes_AB_pooled": {
+            "mean": 95.19087754090232,
+            "std": 0.17352503718393664
+          },
+          "parkes_DE_pooled": {
+            "mean": 0.08263097008758884,
+            "std": 0.014312103847040798
+          }
+        }
+      },
+      "patients": [
+        "HUPA0001P",
+        "HUPA0002P",
+        "HUPA0003P",
+        "HUPA0004P",
+        "HUPA0005P",
+        "HUPA0006P",
+        "HUPA0007P",
+        "HUPA0016P",
+        "HUPA0017P",
+        "HUPA0022P",
+        "HUPA0023P",
+        "HUPA0024P",
+        "HUPA0025P"
+      ]
+    }
+  }
+}
